@@ -1,8 +1,8 @@
-
+---
 layout: post
 title: Active GNSS antenna design (Part III)
 draft: true
-
+---
 
 Alright, welcome to the third and last post about the generation I Active GNSS antenna design saga. In this one I'll post about the actual results obtained from the constructed antenna. But first, I'll briefly explain something I forego in my previous two posts concerning the impedance match of the amplifier and was asked by a friend who happen to read this blog.
 
