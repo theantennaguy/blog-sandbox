@@ -1,0 +1,55 @@
+---
+layout: post
+title: Active GNSS antenna design (Part III)
+draft: true
+---
+
+Alright, welcome to the third and last post about the generation I Active GNSS antenna design saga. In this one I'll post about the actual results obtained from the constructed antenna. But first, I'll briefly explain something I forego in my previous two posts concerning the impedance match of the amplifier and was asked by a friend who happen to read this blog.
+
+The input matching of the LNA designed in the previous posts is pretty miserable, and I really didn't care to match it to 50 $\Omega$ and was solely concerned to match it to the lowest possible NF. Now, it's common to have LNAs with input and output matching to 50 $\Omega$, and that is generally the best practice. This is very relevant since the LNAs can be integrated with band-pass filters at input and/or output, and these filters are usually designed for an input and output impedance of 50 $\Omega$, and when this is not the case, that can change the frequency response of the filter and completely alter its expected performance, hence ruining the receiver. In my particular case, there's no filter, the antenna is directly driving the LNA, so the input matching is less critical. Now, of course, having a high input return loss will reflect the signal back to the antenna and may cause other sources of disturbance, cause de-polarization (remember I'm expecting RHCP and I have a hybrid square guiding those signals tightly), the reflected signal can cause destructive interference with incoming signals and the most obvious reduce the amount of power being delivered to the LNA for amplification. The former two impairments are very hard to predict, but the last one, it can be determined from the matching loss
+
+$$
+ML_{dB}=-10 \times log_{10}(\frac{1}{\(1-|S_{11}|^2\)})
+$$
+
+*remember the $\|S_{11}\|$ is in linear form*
+
+In this case, from simulations, we're looking at a return loss of -4 to -5 dB, which translates to 1.651 to 2.205 dB of matching loss. We can live with that given the 26 dB of theoretical gain we're expecting from the amplifier.
+
+Before moving on to the measured results, here's some nice pictures of the fabricated PCBs of the antenna and the LNA.
+
+|![antpcb](/images/post15/antenna_pcb.png)|![lnapcb](/images/post15/lna_pcb.png)|
+|:-------------------------:|:-------------------------: |
+|Ring antenna PCB | LNA PCB |
+
+And here's the results from measurements of the antenna and the LNA. First lets look at the antenna S11, measured from that u.FL connector test port you see on the image on the right:
+{:refdef: style="text-align: center;"}
+![antennas11](/images/post15/antenna_s-params.png)
+{:refdef}
+
+It's not perfect, but with a coupler working at 1.575 GHz on FR-4 substrate in a low cost manufacturer in China (don't get me wrong, these PCBs are amazing, but it's not RF grade stuff), I'm pretty impressed. With a reflection coefficient below -15 dB in the entire band, it's safe to say we're good to move on.
+
+Now for the messed up part of this project, the LNA, here's the measured results of the BPF740F on this board:
+
+|![lnameasured](/images/post15/lna_s-params_meas.png)|![lnasimulation](/images/post15/lna_s-params_sim.png)|
+|:-------------------------:|:-------------------------: |
+|Measured S-parameters | Simulation S-parameters |
+
+The results are not extraordinary, especially the gain, which is 3 dB lower when compared to the simulation results. Nevertheless, I'm pretty satisfied with the results all things considered. A diminished performance when compared to simulation was expected. Simulation project was tremendously optimistic when compared to the real thing, there were no 3D EM simulation of the board, even considering the real measured S-parameters for the output inductor, it was missing the line sections in between these output components. Plus the bias is not exactly correct to what was used as S-parameter file for the design. The board was tested using a bias-tee with 5 V bias, which resulted in 3.29 V out of the regulator, 2.56 V VC and 14.5 mA IC bias, which is lower then the 22 mA planned which can also explain the lower gain.
+
+Now I also tested this with an evaluation kit from u-blox for a M9N GNSS receiver and compared the performance between this antenna and the active antenna provided in the kit, which as the following specs:
+
+
+Here's some print-screens from the [u-center](https://www.u-blox.com/en/product/u-center) application from both antenna tests so you can see the difference in number of satellites and signal strength from the satellites in both scenarios.
+
+|![ucenter_kit](/images/post15/lna_s-params_meas.png)|![ucenter_custom](/images/post15/lna_s-params_sim.png)|
+|:-------------------------:|:-------------------------: |
+| GNSS performance with the kit antenna | GNSS performance with the ring patch antenna |
+
+The ring-patch antenna performed better then the active antenna from the kit. But it is also quite larger, so that was to be expected. Still, it's a good feeling knowing that the antenna lived to its expectations.
+
+Having this completed I had some ideas on how to improve this antenna, making it more compact and having more active gain, therefore,  I'll keep posting more updates on GNSS antennas in the future. I have an upgrade for the LNA board design, and I'm working on a new, more compact version of the radiating element!
+
+I'll try to diversify, and my next post will be about something different than GNSS, but I'll come back to GNSS in the future for sure.
+
+So stay tuned folks!
