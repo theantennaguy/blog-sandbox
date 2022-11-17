@@ -2,7 +2,7 @@
 
 <p>The input matching of the LNA designed in the previous posts is pretty miserable, and I really didn’t care to match it to 50 $\Omega$ and was solely concerned to match it to the lowest possible NF. Now, it’s common to have LNAs with input and output matching to 50 $\Omega$, and that is generally the best practice. This is very relevant since the LNAs can be integrated with band-pass filters at input and/or output, and these filters are usually designed for an input and output impedance of 50 $\Omega$, and when this is not the case, that can change the frequency response of the filter and completely alter its expected performance, hence ruining the receiver. In my particular case, there’s no filter, the antenna is directly driving the LNA, so the input matching is less critical. Now, of course, having a high input return loss will reflect the signal back to the antenna and may cause other sources of disturbance, cause de-polarization (remember I’m expecting RHCP and I have a hybrid square guiding those signals tightly), the reflected signal can cause destructive interference with incoming signals and the most obvious reduce the amount of power being delivered to the LNA for amplification. The former two impairments are very hard to predict, but the last one, it can be determined from the matching loss</p>
 
-\[ML_{dB}=-10 \times log_{10}(\frac{1}{(1-\|S_{11}\|^2)})\]
+\[ML_{dB}=-10 \times log_{10}(\frac{1}{\(1-|S_{11}|^2\)})\]
 
 <p><em>remember the $|S_{11}|$ is in linear form</em></p>
 
@@ -25,8 +25,7 @@
   </tbody>
 </table>
 
-<p>Alright so, finally here’s the results from measurements of the antenna and the LNA. First lets look at the antenna S11, measured from that u.FL connector test port you see on the image on the right:</p>
-
+<p>And here’s the results from measurements of the antenna and the LNA. First lets look at the antenna S11, measured from that u.FL connector test port you see on the image on the right:</p>
 <p style="text-align: center;"><img src="/images/post15/antenna_s-params.png" alt="antennas11" /></p>
 
 <p>It’s not perfect, but with a coupler working at 1.575 GHz on FR-4 substrate in a low cost manufacturer in China (don’t get me wrong, these PCBs are amazing, but it’s not RF grade stuff), I’m pretty impressed. With a reflection coefficient below -15 dB in the entire band, it’s safe to say we’re good to move on.</p>
