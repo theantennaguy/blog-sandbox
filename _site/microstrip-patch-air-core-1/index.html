@@ -10,8 +10,10 @@
 
     
     <meta name="description" content="As I mentioned on my previous post, today’s post will be about the good old microstrip patch antenna.
+
 " />
     <meta property="og:description" content="As I mentioned on my previous post, today’s post will be about the good old microstrip patch antenna.
+
 " />
     
     <meta name="author" content="The Antenna Guy" />
@@ -59,7 +61,7 @@
   <div class="entry">
     <p>As I mentioned on my previous post, today’s post will be about the good old microstrip patch antenna.</p>
 
-<p style="text-align: center;"><img src="/images/herewego.gif" alt="" /></p>
+<p style="text-align: center;"><img src="/images/post2/herewego.gif" alt="" /></p>
 
 <p>There are two implementations for the microstrip patch antenna typically used for UHF RFID ‘Reader’ antennas, one with an air core and other with ceramic core. The advantage of the former is that it has a wider bandwidth (can usually accommodate the ETSI and FCC bands), better efficiency and therefore higher radiation gain and usually has a better polarization purity. The advantage of the later is that it is smaller. That’s it, on ceramic core microstrip antennas, you sacrifice all performance parameters for size. In some applications which are very restraining in terms of available space, it is essential to have the possibility to reach a compromise between the size of the antenna and its performance.
 Now, as I already mentioned, I’m not going to dwell on the theory of microstrip patch antennas, how they come to be and how they operate, I’ll explain a few things along the way, but my approach will be more on how you go about designing a microstrip patch antenna for this application. To know a little bit more about the workings behind the microstrip antenna, I’d recommend reading <a href="https://www.amazon.com/Microstrip-Printed-Antenna-Design-Electromagnetics/dp/1891121731">Randy Bankroft’s book</a>.</p>
@@ -92,7 +94,7 @@ Now, as I already mentioned, I’m not going to dwell on the theory of microstri
 <p>Besides the parameters, we need to know the available materials, in this case, we’ll want to use an inexpensive FR-4 type PCB and we’ll pick a 60 mil (1.524 mm) thickness board, and since we have no dimension limitation, let’s define an area of 250×250 mm for the antenna. 
 It’s called an air core microstrip antenna, because the middle layer between the patch and the ground plane is, well, air. The reasons to use the air layer in the microstrip patch is essentially to solve two underperforming parameters of the regular patch with only the dielectric substrate in the middle: The bandwidth and the gain.</p>
 
-<p style="text-align: center;"><img src="/images/air_core_sch.png" alt="" /></p>
+<p style="text-align: center;"><img src="/images/post2/air_core_sch.png" alt="" /></p>
 
 <p>To calculate the patch dimensions, you can use the expressions on the previous book, or you can use an <a href="http://www.emtalk.com/mpacalc.php">online calculator</a>. The downside of using the air core, is that the patch size increases, since the permittivity of the substrate decreases. If you have H1 &gt; H0, you can consider a permittivity of roughly 1.1 to calculate the patch dimensions and that should give a good starting point for further tuning.</p>
 
@@ -103,8 +105,8 @@ It’s called an air core microstrip antenna, because the middle layer between t
 <table>
   <tbody>
     <tr>
-      <td><img src="/images/coax_feed_variation.png" alt="" /></td>
-      <td><img src="/images/coax_feed_variation-2.png" alt="" /></td>
+      <td><img src="/images/post2/coax_feed_variation.png" alt="" /></td>
+      <td><img src="/images/post2/coax_feed_variation-2.png" alt="" /></td>
     </tr>
   </tbody>
 </table>
@@ -114,8 +116,8 @@ It’s called an air core microstrip antenna, because the middle layer between t
 <table>
   <tbody>
     <tr>
-      <td><img src="/images/microstrip1_s11.png" alt="" /></td>
-      <td><img src="/images/microstrip1_gain.png" alt="" /></td>
+      <td><img src="/images/post2/microstrip1_s11.png" alt="" /></td>
+      <td><img src="/images/post2/microstrip1_gain.png" alt="" /></td>
     </tr>
   </tbody>
 </table>
@@ -124,15 +126,15 @@ It’s called an air core microstrip antenna, because the middle layer between t
 
 <p>All is related to the fringing effect of the electric field at the edges of the microstrip patch, which is responsible for the antenna radiation. The more ‘loose’ the fringing effect is, the better the efficiency. The higher the permittivity and thinner the distance between patch and ground, the more ‘tight’ the fringing effect is.</p>
 
-<p style="text-align: center;"><img src="/images/tenor.gif" alt="" /></p>
+<p style="text-align: center;"><img src="/images/post2/tenor.gif" alt="" /></p>
 
 <p>The reason to design a square patch, instead of the more natural rectangular patch, has to do with that fact that we’re designing a patch for circular polarization, and that’s easily attainable by starting from a square patch. Now you should know that decision comes at the cost of a reduction in bandwidth and efficiency of the antenna, but that’s a compromise we have to make to fulfill a mandatory requirement that’s the circular polarization. However, some things are still necessary, because a square patch has a linear polarization as one can see in the surface current distribution.</p>
 
-<p style="text-align: center;"><img src="/images/rfid_patch-896mhz_01.gif" alt="" /></p>
+<p style="text-align: center;"><img src="/images/post2/rfid_patch-896mhz_01.gif" alt="" /></p>
 
 <p>(As the phase progresses, the current points either upwards or downwards along the patch length.). So we need to make the polarization circular. However, there’s five different ways to get circular polarization with microstrip patches and this post is already getting long, so I’ll leave that to my next post.</p>
 
-<p style="text-align: center;"><img src="/images/bye2.gif" alt="" /></p>
+<p style="text-align: center;"><img src="/images/post2/bye2.gif" alt="" /></p>
 
 
   </div>

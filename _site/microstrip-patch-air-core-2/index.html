@@ -10,8 +10,10 @@
 
     
     <meta name="description" content="This is a continuation of my previous post on the air core microstrip patch antenna. It can be found here. At this point, we need to get the patch to radiate a circularly polarized wave (and correct the added inductance of the feed pin by the increased height).
+
 " />
     <meta property="og:description" content="This is a continuation of my previous post on the air core microstrip patch antenna. It can be found here. At this point, we need to get the patch to radiate a circularly polarized wave (and correct the added inductance of the feed pin by the increased height).
+
 " />
     
     <meta name="author" content="The Antenna Guy" />
@@ -59,7 +61,7 @@
   <div class="entry">
     <p>This is a continuation of my previous post on the air core microstrip patch antenna. It can be found here. At this point, we need to get the patch to radiate a circularly polarized wave (and correct the added inductance of the feed pin by the increased height).</p>
 
-<p style="text-align: center;"><img src="/images/spin_cat.gif" alt="" /></p>
+<p style="text-align: center;"><img src="/images/post3/spin_cat.gif" alt="" /></p>
 
 <p>Now, if looking at the microstrip patch through the cavity mode analysis, it’s possible to produce two fundamental frequencies of operation, set by the propagation mode that is activated in the patch, these are respectively TM10 and TM01. If the patch is fed along the length, we get the TM10, if it is fed along the width, we get the TM01…or is it the other way around? I always forget which is which! But it doesn’t matter, what is relevant is that we keep in mind that exciting fields in different places of the patch will excite different modes which might have or not the same resonance, but will have a phase delay between them. Feeding on one edge of the patch excites one mode, while feeding at the other edge excites the other mode. In a square patch, both modes have the same resonant frequency.</p>
 
@@ -75,11 +77,11 @@
 
 <p>Picture below shows the first four techniques mentioned before. If you want to learn more in depth about microstrip patch antennas, most of this stuff can be found in <a href="https://www.amazon.com/Microstrip-Printed-Antenna-Design-Electromagnetics/dp/1891121731">Randy Bankroft’s book</a>.</p>
 
-<p style="text-align: center;"><img src="/images/feed_methods.png" alt="" /></p>
+<p style="text-align: center;"><img src="/images/post3/feed_methods.png" alt="" /></p>
 
 <p>More or less all these techniques will produce a similar axial ratio bandwidth. However. techniques (II) and (IV) are difficult to implement in the air core antenna without interfering with higher order modes, hence messing it up completely. The easiest way to go about, for the air core microstrip patch, and most commonly used, is the technique III.</p>
 
-<p style="text-align: center;"><img src="/images/dual_feed.jpg" alt="" /></p>
+<p style="text-align: center;"><img src="/images/post3/dual_feed.jpg" alt="" /></p>
 
 <p>Technique (V) provides the larger axial-ratio band of all. However, it is the most costly solution and requires a specific feeding network, usually comprising a 90º-square hybrid in order to get two ports with the same amplitude and 90º phase delay in between them.</p>
 
@@ -88,8 +90,8 @@
 <table>
   <tbody>
     <tr>
-      <td><img src="/images/linear_vs_circ_smith.png" alt="" /></td>
-      <td><img src="/images/linear_vs_circ_z.png" alt="" /></td>
+      <td><img src="/images/post3/linear_vs_circ_smith.png" alt="" /></td>
+      <td><img src="/images/post3/linear_vs_circ_z.png" alt="" /></td>
     </tr>
   </tbody>
 </table>
@@ -99,8 +101,8 @@
 <table>
   <thead>
     <tr>
-      <th style="text-align: center"><img src="/images/corner_cut_profile.png" alt="" /></th>
-      <th style="text-align: center"><img src="/images/hybrid_profile.png" alt="" /></th>
+      <th style="text-align: center"><img src="/images/post3/corner_cut_profile.png" alt="" /></th>
+      <th style="text-align: center"><img src="/images/post3/hybrid_profile.png" alt="" /></th>
     </tr>
   </thead>
   <tbody>
@@ -109,8 +111,8 @@
       <td style="text-align: center">Microstrip patch with dual feed</td>
     </tr>
     <tr>
-      <td style="text-align: center"><img src="/images/corner_cut_profile2.png" alt="" /></td>
-      <td style="text-align: center"><img src="/images/hybrid_profile_2.png" alt="" /></td>
+      <td style="text-align: center"><img src="/images/post3/corner_cut_profile2.png" alt="" /></td>
+      <td style="text-align: center"><img src="/images/post3/hybrid_profile_2.png" alt="" /></td>
     </tr>
     <tr>
       <td style="text-align: center">Microstrip patch with corners cut (backplate)</td>
@@ -124,27 +126,27 @@
 <table>
   <tbody>
     <tr>
-      <td><img src="/images/cuts_vs_hybrid.png" alt="" /></td>
-      <td><img src="/images/cuts_vs_hybrid_wider.png" alt="" /></td>
+      <td><img src="/images/post3/cuts_vs_hybrid.png" alt="" /></td>
+      <td><img src="/images/post3/cuts_vs_hybrid_wider.png" alt="" /></td>
     </tr>
   </tbody>
 </table>
 
 <p>Besides impedance match, the circular polarization bandwidth is also much wider in the dual-feed technique. Coming at the cost of a degradation in the gain of the antenna.</p>
 
-<p style="text-align: center;"><img src="/images/gain_axialr.png" alt="" /></p>
+<p style="text-align: center;"><img src="/images/post3/gain_axialr.png" alt="" /></p>
 
 <p>Now, both of these antennas have RHCP (Right Hand Circular Polarization). This can be seen in the radiation gain results, but can also be easily observed in the surface current distribution, as shown below.</p>
 
-<p style="text-align: center;"><img src="/images/hybrid_currents.gif" alt="" /></p>
+<p style="text-align: center;"><img src="/images/post3/hybrid_currents.gif" alt="" /></p>
 
 <p>Unlike the current distribution on the microstrip patch from last post, in which the arrows either pointed upwards or downwards, in this case they rotate with varying phase. Now you’re probably thinking “Hey, you said they were RHCP but the arrows are rotating counter-clockwise!”</p>
 
-<p style="text-align: center;"><img src="/images/liar.gif" alt="" /></p>
+<p style="text-align: center;"><img src="/images/post3/liar.gif" alt="" /></p>
 
 <p>Now hold your horses Anakin before you get any respiratory problems and such. Actually, the convention about the polarization directions, is judged by the variation of the vector of the electric field when the wave travels away from the antenna! Check out this <a href="https://youtu.be/84AcKIcF7VY">awesome video</a> for more information on polarization.</p>
 
-<p style="text-align: center;"><img src="/images/obi-wan.gif" alt="" /></p>
+<p style="text-align: center;"><img src="/images/post3/obi-wan.gif" alt="" /></p>
 
 <p>Finally, to finish up, here’s a summary comparison of both implementations to the requirements we defined on last post.</p>
 

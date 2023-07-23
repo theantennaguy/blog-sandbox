@@ -11,9 +11,11 @@
     
     <meta name="description" content="Hey there folks! 
 Today I’m heading back to the RFID reader antennas topic. This time, I’m covering another typical antenna found in these readers, which is the quadrifilar antenna. In this particular case, a printed implementation of the quadrifilar antenna.
+
 " />
     <meta property="og:description" content="Hey there folks! 
 Today I’m heading back to the RFID reader antennas topic. This time, I’m covering another typical antenna found in these readers, which is the quadrifilar antenna. In this particular case, a printed implementation of the quadrifilar antenna.
+
 " />
     
     <meta name="author" content="The Antenna Guy" />
@@ -62,15 +64,15 @@ Today I’m heading back to the RFID reader antennas topic. This time, I’m cov
     <p>Hey there folks! 
 Today I’m heading back to the RFID reader antennas topic. This time, I’m covering another typical antenna found in these readers, which is the quadrifilar antenna. In this particular case, a printed implementation of the quadrifilar antenna.</p>
 
-<p style="text-align: center;"><img src="/images/hello.gif" alt="" /></p>
+<p style="text-align: center;"><img src="/images/post7/hello.gif" alt="" /></p>
 
 <p>These antennas are composed of four arms, either monopoles or PIFA type elements, where each of the elements is fed with a 90º phase delay in between in order to create a circularly polarized radiation. Another common place for quadrifilar antennas is the helix type antennas used for VHF and UHF band communications and GNSS applications. These are very popular among HAMs and also some commercial applications. Here’s some examples:</p>
 
 <table>
   <thead>
     <tr>
-      <th style="text-align: center"><img src="/images/quadrifilar_helix.png" alt="helix" /></th>
-      <th style="text-align: center"><img src="/images/quadrifilar.png" alt="pifa" /></th>
+      <th style="text-align: center"><img src="/images/post7/quadrifilar_helix.png" alt="helix" /></th>
+      <th style="text-align: center"><img src="/images/post7/quadrifilar-2.png" alt="pifa" /></th>
     </tr>
   </thead>
   <tbody>
@@ -91,15 +93,15 @@ Today I’m heading back to the RFID reader antennas topic. This time, I’m cov
 
 <p>I’ll start with designing the IFA: IFAs are pretty old antennas, no busy covering the particularities of it. But if you’re interested, you can check <a href="https://www.antenna-theory.com/antennas/patches/pifa.php">this page</a>, has a lot of useful resources. It’s easy, you just design an arm on a PCB, place it at some distance from a ground plane (on the picture below, the antenna arm is in the top PCB while the ground is in the bottom PCB), feed it at a given distance from one of the arms edges and place a short circuit pin at that end. Like this:</p>
 
-<p style="text-align: center;"><img src="/images/quadrifilar_prespective.png" alt="" /></p>
+<p style="text-align: center;"><img src="/images/post7/quadrifilar_prespective.png" alt="" /></p>
 
 <p>NOTE: gray zones are dielectric (FR4), yellow zones are copper.</p>
 
 <table>
   <thead>
     <tr>
-      <th style="text-align: center"><img src="/images/radiation_abs.png" alt="rad_abs" /></th>
-      <th style="text-align: center"><img src="/images/radiation_ar.png" alt="rad_ar" /></th>
+      <th style="text-align: center"><img src="/images/post7/radiation_3d.png" alt="rad_abs" /></th>
+      <th style="text-align: center"><img src="/images/post7/radiation_ar_quadrifilar.png" alt="rad_ar" /></th>
     </tr>
   </thead>
   <tbody>
@@ -108,8 +110,8 @@ Today I’m heading back to the RFID reader antennas topic. This time, I’m cov
       <td style="text-align: center">Radiation pattern (Axial Ratio) at 900 MHz</td>
     </tr>
     <tr>
-      <td style="text-align: center"><img src="/images/radiation_polarization.png" alt="rad_pol" /></td>
-      <td style="text-align: center"><img src="/images/radiation_w_freq.png" alt="rad_wfreq" /></td>
+      <td style="text-align: center"><img src="/images/post7/radiation_polarization.png" alt="rad_pol" /></td>
+      <td style="text-align: center"><img src="/images/post7/radiation_w_freq.png" alt="rad_wfreq" /></td>
     </tr>
     <tr>
       <td style="text-align: center">Radiation pattern (Theta/Phi relation) at 900 MHz</td>
@@ -126,7 +128,7 @@ Today I’m heading back to the RFID reader antennas topic. This time, I’m cov
 
 <p>Ok, so we have our base antenna, now we just replicate three times the same design, rotate each element by 90º in relation to the previous and give some slight separation between the elements, so that the distance between each of the arms and the center of the antennas is roughly a quarter of the wavelength, ending up with the antenna as proposed in Qiang Liu’s paper, like so:</p>
 
-<p style="text-align: center;"><img src="/images/quadrifilar_complete_prespective.png" alt="" /></p>
+<p style="text-align: center;"><img src="/images/post7/quadrifilar_complete_prespective.png" alt="" /></p>
 
 <p>Now, in order to obtain a circular polarization radiation, you just feed each of the elements, with the same power amplitude and a 90º phase difference between them. To avoid designing the feeding network to have to check for the array, in CST you can just add a port to each element and then setup the simultaneous excitation in the ‘Excitation settings’ menu, within the ‘Simulation setup’ panel.</p>
 
@@ -135,8 +137,8 @@ Today I’m heading back to the RFID reader antennas topic. This time, I’m cov
 <table>
   <thead>
     <tr>
-      <th style="text-align: center"><img src="/images/radiation_abs_quadrifilar.png" alt="rad_abs" /></th>
-      <th style="text-align: center"><img src="/images/radiation_abs_quadrifilar.png" alt="rad_ar" /></th>
+      <th style="text-align: center"><img src="/images/post7/radiation_abs.png" alt="rad_abs" /></th>
+      <th style="text-align: center"><img src="/images/post7/radiation_ar.png" alt="rad_ar" /></th>
     </tr>
   </thead>
   <tbody>
@@ -145,8 +147,8 @@ Today I’m heading back to the RFID reader antennas topic. This time, I’m cov
       <td style="text-align: center">Radiation pattern (Axial Ratio) at 900 MHz</td>
     </tr>
     <tr>
-      <td style="text-align: center"><img src="/images/radiation_lhcp.png" alt="rad_pol" /></td>
-      <td style="text-align: center"><img src="/images/radiation_rhcp.png" alt="rad_wfreq" /></td>
+      <td style="text-align: center"><img src="/images/post7/radiation_lhcp.png" alt="rad_pol" /></td>
+      <td style="text-align: center"><img src="/images/post7/radiation_rhcp.png" alt="rad_wfreq" /></td>
     </tr>
     <tr>
       <td style="text-align: center">Radiation pattern (LHCP) at 900 MHz</td>
@@ -159,21 +161,21 @@ Today I’m heading back to the RFID reader antennas topic. This time, I’m cov
 
 <p>For the matching network I picked up the design from the Xuefeng Zhao’s paper, which is a Wilkinson power divider, with one output delayed by 90º, then followed by delay lines of 180º in each branch, as in the following construction:</p>
 
-<p style="text-align: center;"><img src="/images/feeding_nw.png" alt="" /></p>
+<p style="text-align: center;"><img src="/images/post7/feeding_nw.png" alt="" /></p>
 
 <p>Combining this matching network with the antenna results we can finally have a glimpse at the expected impedance operating frequency, given by the S parameters at the single port input at the entrance of the Wilkinson power divider. Here it is:</p>
 
-<p style="text-align: center;"><img src="/images/spara.png" alt="" /></p>
+<p style="text-align: center;"><img src="/images/post7/spara.png" alt="" /></p>
 
 <p>To actually find the whole covered band, we have to look from 500 to 1300 MHz, to discover the impedance bandwidth of this antenna is between 700 and 1100 MHz. Plus, the radiation results for the combination of the matching network with the antenna elements are also very good. The axial ratio is below 3 dB (circularly polarized) through 820 to 980 MHz (more than necessary) as well as the efficiencies ranging above 95% for the whole spectrum. Here’s the plot:</p>
 
-<p style="text-align: center;"><img src="/images/radiation_w_freq_quad.png" alt="" /></p>
+<p style="text-align: center;"><img src="/images/post7/radiation_w_freq_quad.png" alt="" /></p>
 
 <p>However, the truth is that these results are based on a simulation of ideal transmission lines with a perfect transition to the feeding points of the antenna. This efficiency results are only from the antenna radiation and don’t take into account the loss effect of the feeding network. For that, the feeding network 3D EM model should be simulated and integrated with the antenna. Nevertheless, these results give a pretty good indication that we’re in the right track, and prove all the advantage points I referred at the beginning of this post. The two downsides of this antenna topology versus the air core microstrip patch I’ve shown in previous posts, are the lower gain and the more complex implementation.</p>
 
 <p>The smaller gain is a direct consequence of the reduced size of the antenna. We’re trading size for gain, that’s an essential rule in antenna design, you always sacrifice on gain to achieve smaller package antennas, with some exceptions for more complex techniques with metamaterials and such…</p>
 
-<p style="text-align: center;"><img src="/images/going.gif" alt="" /></p>
+<p style="text-align: center;"><img src="/images/post7/going.gif" alt="" /></p>
 
 <p>…but that’s a story for another time!</p>
 

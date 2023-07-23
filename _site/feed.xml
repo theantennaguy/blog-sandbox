@@ -1,0 +1,969 @@
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.3">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2023-07-23T11:30:57+01:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">The Antenna Guy</title><subtitle>Electromagnetic Wizard</subtitle><entry><title type="html">EVs are (not) evil</title><link href="http://localhost:4000/evs-are-not-evil/" rel="alternate" type="text/html" title="EVs are (not) evil" /><published>2023-07-23T00:00:00+01:00</published><updated>2023-07-23T00:00:00+01:00</updated><id>http://localhost:4000/evs-are-not-evil</id><content type="html" xml:base="http://localhost:4000/evs-are-not-evil/">&lt;p&gt;This time it’s not about antennas or anything related to radio-frequency, this time it’s a, probably controversial, topic that I’ve been looking and discussing with some folks for at least a year, and it is related to Electric Vehicles (EVs). As an electronics engineer, I am a technology advocate in general, however, with regards to EVs, I don’t like the way they’re being advertised as the grand solution for mobility in detriment of everything else, and specially I don’t think the best way to make EVs with environment in mind is the EVs the automakers are developing, I honestly believe EVs are a green solution for mobility, but I think most automakers are perverting the concept. I warned you this post was a controversial!&lt;/p&gt;
+
+&lt;p&gt;I’ve been, for a while, searching for information online regarding CO2 emissions in general and trying to validate my thesis that EVs, as being currently developed and marketed by the major auto brands, are mostly aberrations and are not entirely green, as they could actually be. But then a spark to commit to finish this post happened. A few days after I started writing this post (yeah, I kinda quit on it, but decided to get back on after a long time), some news came out about the &lt;a href=&quot;https://www.cnbc.com/2023/01/26/toyota-ceo-and-president-akio-toyoda-to-step-down-.html&quot;&gt;step down of Toyota’s CEO Akio Toyoda&lt;/a&gt; as chief executive. The issue becomes relevant because Akio Toyoda was not entirely convinced by the electric vehicle revolution and that was making Toyota’s stakeholders not very happy. Toyota was a pioneer in electrification of cars, with many years of development of hybrid engines, so it’s clear that Toyota has always had an interest in creating more sustainable solutions, plus in the recent years they have been the main drivers for hydrogen powered vehicles, which might as well be part of future mobility solutions. It seems this decision to step down might have been triggered in consequence of Toyota’s chief scientist &lt;a href=&quot;https://newsroom.toyota.eu/toyotas-dr-gill-pratt-explains-the-advantage-of-toyotas-multi-technology-path-to-carbon-neutrality-at-davos-world-economic-forum/&quot;&gt;Gill Pratt presentation at the World Economic Forum&lt;/a&gt; in Davos, where he spewed some bull&lt;em&gt;**&lt;/em&gt; about lithium scarcity in the world and how it was best to bet on hybrids then full EVs… well that’s not cool either. It seems their angle was to try to advertise for hybrids, which are Toyota’s biggest market, maybe because they’ve been lagging in the EV world, even though Toyota already released a full EV and it’s looking awesome. At this point I don’t really know what’s going on in their minds, so I’ll try not to make any further assumptions.&lt;/p&gt;
+
+&lt;p&gt;Still, there are a few points to consider about EVs and I’ll try to convey my point about those in this post. I’m certain that the move forward is not to be full-EV nor anti-EV. Taking one of these positions is pure fanatism and nothing good can come out of that.&lt;/p&gt;
+
+&lt;p&gt;To show that EVs, as they’re being developed at the moment are not the way to go, let’s start by looking at the emissions from these. One needs to realize that electricity production accounted for &lt;a href=&quot;https://www.eia.gov/tools/faqs/faq.php?id=77&amp;amp;t=8&quot;&gt;32% of total emissions of CO2 in the USA in 2021&lt;/a&gt;, right of the bat one can see how the assumption that using electricity to move vehicles may have an issue, if you factor in the increase in electricity needs due to the increase of electric vehicles circulating and the fact that the easiest way to scale electricity production are the fossil fuel plants or nuclear power plants with all the issues that come with that. Then you can already see the problem appearing, but let’s dig deeper…&lt;/p&gt;
+
+&lt;iframe src=&quot;https://giphy.com/embed/4EF5LwiRfpBKQUOsoF&quot; width=&quot;480&quot; height=&quot;264&quot; frameborder=&quot;0&quot; class=&quot;giphy-embed&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
+&lt;p&gt;&lt;a href=&quot;https://giphy.com/gifs/copeland-gold-digging-holes-4EF5LwiRfpBKQUOsoF&quot;&gt;via GIPHY&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Let’s try to estimate the amount of CO2 an electric car produces to drive for 100 km. Now this depends on many different factors, such as the car itself, the country you’re talking about, the sources to produce electricity used in that country, etc.. I’ll pick one car and use the USA as an example for calculations.&lt;/p&gt;
+
+&lt;p&gt;And what better model for this demonstration than the best-selling Tesla model Y, the most widely sold EV in &lt;a href=&quot;https://www.caranddriver.com/features/g36278968/best-selling-evs-of-2021/#:~:text=12%20Bestselling%20Electric%20Vehicles%20of%202021%201%201.,Porsche%20Taycan%20%289419%20units%20sold%29%20...%20Weitere%20Elemente&quot;&gt;2021&lt;/a&gt; and &lt;a href=&quot;https://electrek.co/2023/01/09/the-top-10-best-selling-electric-vehicles-in-the-us-of-2022/&quot;&gt;2022&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;The Tesla model Y is a 4.75 m long, 2.13 wide vehicle, with 455 HP of peak power, which is more than any supercar of the 90’s, 494 Nm of Torque, which is more than a cargo van like a Mercedes Vito (400Nm) and 2066 kg of dry weight, again roughly in the ballpark of a cargo van like the Vito, which is a commercial vehicle designed to transport goods. If you don’t find that obscene yet, let’s crunch the numbers.&lt;/p&gt;
+
+&lt;p&gt;The Tesla model Y long range has a 75 kWh battery capacity, with which it claims to have a range of 530 km, meaning the average consumption is 75kWh / (530/100) = 14.15 kWh per 100km of travel.&lt;/p&gt;
+
+&lt;p&gt;Looking up the certifications for the Tesla model Y in the EPA (Environmental Protection Agency), among many other documents, one can find &lt;a href=&quot;https://dis.epa.gov/otaqpub/display_file.jsp?docid=54394&amp;amp;flag=1&quot;&gt;this one&lt;/a&gt;, where there’s data about charging and depletion tests performed on the car, and in page 9 for instance we can see that for the long range model, a total of 92.213 kWh was used to completely fill 81.052 kWh of battery capacity and this was used to travel a total of 376 miles (605 km), which means that the charging efficiency of the battery is roughly (81.052 / 92.213) x 100 =  87.90%, or rather that ((92.213 - 81.052) / 81.052) x 100 =  13.77% of power is loss during charging. Also to note, this was done in climate controlled environment with brand new batteries and a brand new car. This means that under normal conditions, where temperatures and humidity are not ideal and with ageing batteries and ageing engine, suspensions and tires, these efficiencies start to get worse. Plus, high voltage chargers were used, if normal plug charging is used, the efficiency of charging can drop even further to as low as 60%, so in the worst case scenario, we’d be looking at 113.4 kWh to charge the Tesla battery. There’s more info on charging efficiencies in &lt;a href=&quot;https://afdc.energy.gov/files/u/publication/ev_emissions_impact.pdf&quot;&gt;this report&lt;/a&gt; from the US Department of Energy.&lt;/p&gt;
+
+&lt;p&gt;Let’s take the values from the certification and in the best case scenario it drove for 658.2km with 92.213 kWh energy used, while in the worst case scenario it drove for 408.7 km, where it was subject to colder temperatures. In real usage scenario, the temperatures vary, the driving conditions change even more drastically, which means the range will in reality be something in between, which translates to 533.4 km, quite in line with the estimated average range offered by Tesla (maybe they calculate the estimated range from these measures?). However, with 92.213 kWh total power to travel 533.4 km, this means an average consumption of 92.213 kWh / (533.4 / 100)  = 17.23 kWh/100 km, or 0.1729 kWh per km.&lt;/p&gt;
+
+&lt;p&gt;With these numbers, let’s see how much CO2 is released to produce said energy. If we take the USA numbers for reference, then 61% of the electricity generation is from Fossil Fuel burning, where from this &lt;a href=&quot;https://www.eia.gov/tools/faqs/faq.php?id=427&amp;amp;t=8&quot;&gt;38.4% is from Gas and 21.9% from Coal burning&lt;/a&gt;. Other sources and their corresponding emissions per kWh energy generated can be found in the following table:&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;Fuel source&lt;/th&gt;
+      &lt;th style=&quot;text-align: center&quot;&gt;CO2 emissions per 1kWh energy&lt;/th&gt;
+      &lt;th style=&quot;text-align: center&quot;&gt;% to generate electricity (in USA)&lt;/th&gt;
+      &lt;th style=&quot;text-align: center&quot;&gt;CO2 emissions adjusted to % (g)&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Coal&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;950 g&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;21.9&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;208.1&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Natural gas&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;350 g&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;38.4&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;134.4&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Biomass&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;350 g*&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;1.3&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;4.6&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Solar&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;60 – 150 g&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;2.8&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;1.7**&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Wind&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;3 – 22 g&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;9.2&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;0.3**&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Nuclear&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;6 g&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;18.9&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;1.1&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Hydro&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;4 g&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;6.1&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;0.2&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt; &lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt; &lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;Total:&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;350.4&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;*Assumed the same emissions as Gas plants since the essence is the same, should not be wrong by much. 
+**Assumed the most optimistic (least emissions) scenario.&lt;/p&gt;
+
+&lt;p&gt;If the electricity of the Tesla Model Y was entirely generated from Coal power plants, it would be equivalent to it emitting 950 x 0.1729 = 164.25 g/km of CO2, which is more that an equivalent hybrid car. Fortunately, electricity production from coal is less than a quarter of total electricity produced (in the USA). So, if we account the CO2 emissions considering the different sources production as per the previous table, the Tesla Model Y would emit roughly 350.4 x 0.1729 = 60.58 g/km of CO2, which is less than half of said hybrid.&lt;/p&gt;
+
+&lt;p&gt;For comparison purposes let’s look at the Toyota RAV 4. Why the RAV4 you ask, well, first I started this post talking about Toyota so it’s only fitting I compare to one of their models, also the RAV4 is a comparable car in terms of size and utility and the RAV4 has been one of the &lt;a href=&quot;https://www.statista.com/statistics/343193/best-selling-suv-and-crossover-models-in-the-united-states/&quot;&gt;best-selling crossover/SUVs&lt;/a&gt; for the past years, so from my point of view, the model Y and the RAV4 are two reasonably comparable choices.&lt;/p&gt;
+
+&lt;p&gt;Engine performance is not comparable, the Model Y has much more horsepower and torque than the 2.5L hybrid engine of the RAV4, but that just goes to show how ridiculous that is. Nevertheless, the RAV4 lets you go to nearly 200 km/h, while the Tesla caps you at around 150 km/h of max speed and even then if you travel at that speed for long, you won’t reach those numbers of efficiency/range, so all in all it’s hard to compare combustion and electric cars, but bear with me with this comparison.&lt;/p&gt;
+
+&lt;p&gt;The Toyota hybrid engine has emissions rated at 130 g/km, which is quite impressive for such a sizeable car. That’s a little more than double the calculated emissions for the Tesla Model Y, but again, the variation is probably going to be bigger for the EV when compared to the hybrid engine. The emissions for the hybrid are going to vary roughly 10% depending on driving style and climatic conditions, which brings the worst case to 143 g/km of CO2 emissions. But for the Tesla, in the worst case, as mentioned above, the range reduces to 408.7 km, and most probably even lower, because driving speed is not maintained constant, there’s different circumstances in traffic and the AC in the car will be used, but even considering the 408.7 km, brings the average consumption to 92.213 kWh / (408.7 / 100)  = 22.56 kWh/100 km, or 0.2256 kWh per km, increasing the CO2 emissions to 79.05 g/km, and if we consider the worst charging conditions, then we’re looking at 113.4 kWh / (408.7 / 100)  = 27.75 kWh/100 km, or 0.2775 kWh per km, increasing the CO2 emissions to 97.2 g/km, which closes the gap to the combustion engine emissions. The real CO2 emission number of the Tesla will be somewhere in between those 60 to 100 g per km.&lt;/p&gt;
+
+&lt;p&gt;Another important factor to bring in is the CO2 emissions to produce the fuels for electricity generation, and of course one needs to also add in the CO2 emissions from refineries to produce petrol and diesel for the combustion cars. What’s called the ‘Well to Wheel’ (WTW) or ‘Well To Tank’ (WTT) emissions ratio.&lt;/p&gt;
+
+&lt;p&gt;(put well to wheel or well to tank image: https://joint-research-centre.ec.europa.eu/sites/default/files/styles/oe_theme_medium_2x_no_crop/public/2016-12/wtwanalysis.png?itok=q2cDsrjC)&lt;/p&gt;
+
+&lt;p&gt;While I was researching for this post I came across a &lt;a href=&quot;https://youtu.be/MEqxaH47DTs&quot;&gt;youtube video&lt;/a&gt; with this exact comparison between the Model Y and the RAV4. Which was quite shocking because I had like 70% of this post already written and thought that all this was going to shambles, but then I realized that some things were left out, as I’ll explain right after, and besides my post and that video are not trying to convey the same message, as my take is not to convey that the hybrid is nearly as green as the EV. It may seem like so, so far, but it is not, keep reading!&lt;/p&gt;
+
+&lt;iframe src=&quot;https://giphy.com/embed/3o6nURwdH7K5z3Hd8A&quot; width=&quot;480&quot; height=&quot;270&quot; frameborder=&quot;0&quot; class=&quot;giphy-embed&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
+&lt;p&gt;&lt;a href=&quot;https://giphy.com/gifs/showtimesports-showtime-boxing-3o6nURwdH7K5z3Hd8A&quot;&gt;via GIPHY&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;So, if one considers the WTT ratio for petrol, according to that video it would be in the ballpark of 2.827 kg/l, &lt;a href=&quot;https://innovationorigins.com/en/producing-gasoline-and-diesel-emits-more-co2-than-we-thought/&quot;&gt;another source&lt;/a&gt; puts it it at 3.140 kg/l, however, it also claims one should add 30% to the announced emissions from engine combustion to get a value close to the WTT ratio and if we consider 3.140 kg/l on the RAV4 that would mean an increase of 60%, so something is not entirely right, hence, I’m going to go ahead and consider the 2.827 kg/l. This means the RAV4 would actually emit (considering 6.6 l/100km of fuel consumption), 6.6 * 2827 / 100 = 186.58 g/km of CO2 (43% more than driving only emissions), which means it emits two times more than the Model Y.&lt;/p&gt;
+
+&lt;p&gt;At this point one can conclude that, effectively the EV emits much less CO2 when compared to even a reasonably efficient hybrid vehicle. And, this is using the CO2 emissions of electricity production in the US, because if we factor in France for instance, where nearly &lt;a href=&quot;https://www.statista.com/statistics/768066/electricity-production-france-source/&quot;&gt;80% of its electricity is produced from nuclear and hydro plants&lt;/a&gt; then the gap is even bigger and EVs are definitely much greener in France. But such is not the case for China, where &lt;a href=&quot;https://www.statista.com/statistics/1235176/china-distribution-of-electricity-production-by-source/&quot;&gt;most of the electricity production is fueled by coal&lt;/a&gt;. Therefore, EVs polute as much as a regular petrol car in China!&lt;/p&gt;
+
+&lt;p&gt;Now, with the shift in electricity production around the world towards greener sources, with increase efficiency of the EV cars, definitely the EVs will be a much greener means of transportation. But that should also bear in the shoulders of the automakers, especially Tesla as the main driver of this transformation, by producing more efficient cars. Not simply rely on the fact that they’re electric, but make efficient transportation means. The size, weight and power of the current models are not efficient from a transportation point of view. And when you think that most cars in eastern cultures are driven carrying on average less than 2 people, then moving 2 tonnes of vehicle around just to carry 1 person is simply ludicrous. Of course people should be re-educated on that matter, but the automakers could also do something about that.&lt;/p&gt;
+
+&lt;p&gt;In summary, I do believe EVs are and should definitely be part of the picture for future mobility. EVs should be one solution, but that’s the key, they should be one, among many solutions for mobility. Unfortunately, EVs are being proclaimed as the saviors of the environment and pushed aggressively for sales in detriment of promoting and investigating on other possible alternatives, but after what I’ve tried to convey with this post I hope that you’ve realized that’s not entirely true, and hence, our politics should act more responsibly (yeah right, who I’m a kidding…) and actually create a conjecture to promote a safe and greener future and not simply brush off this topic on an east solution, that will probably end up biting us all in our bottoms in a few years.&lt;/p&gt;
+
+&lt;p&gt;Well that was some gloomy post, I promise to get back to radio next time.&lt;/p&gt;
+
+&lt;p&gt;Stay tuned!&lt;/p&gt;
+
+&lt;p&gt;Sources used for this post:
+&lt;a href=&quot;https://www.eia.gov/tools/faqs/faq.php?id=77&amp;amp;t=8&quot;&gt;Eletricity production accounts for 32% of total CO2 emissions&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://www.planete-energies.com/en/medias/close/electricity-generation-and-related-co2-emissions&quot;&gt;CO2 to generate electricity 1&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://www.eia.gov/tools/faqs/faq.php?id=667&amp;amp;t=8&quot;&gt;CO2 to generate electricity 2&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://ourworldindata.org/emissions-by-fuel&quot;&gt;CO2 emissions to produce coal, gas, oil&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://www.eia.gov/tools/faqs/faq.php?id=427&amp;amp;t=8&quot;&gt;Amount of electricity by source&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://www.caranddriver.com/features/a36062942/evs-explained-charging-losses/&quot;&gt;Efficiency of Tesla charging&lt;/a&gt;&lt;/p&gt;</content><author><name></name></author><summary type="html">This time it’s not about antennas or anything related to radio-frequency, this time it’s a, probably controversial, topic that I’ve been looking and discussing with some folks for at least a year, and it is related to Electric Vehicles (EVs). As an electronics engineer, I am a technology advocate in general, however, with regards to EVs, I don’t like the way they’re being advertised as the grand solution for mobility in detriment of everything else, and specially I don’t think the best way to make EVs with environment in mind is the EVs the automakers are developing, I honestly believe EVs are a green solution for mobility, but I think most automakers are perverting the concept. I warned you this post was a controversial!</summary></entry><entry><title type="html">Active GNSS antenna design (Part II)</title><link href="http://localhost:4000/gnss-active-antenna-lna/" rel="alternate" type="text/html" title="Active GNSS antenna design (Part II)" /><published>2022-10-13T00:00:00+01:00</published><updated>2022-10-13T00:00:00+01:00</updated><id>http://localhost:4000/gnss-active-antenna-lna</id><content type="html" xml:base="http://localhost:4000/gnss-active-antenna-lna/">&lt;p&gt;Alright, here we are for the second part of the GNSS active antenna design. This time it didn’t took so long to get a new post release into the blog. I guess it’s because I haven’t been doing any online courses or anything, so more free time to play around with&lt;/p&gt;
+
+&lt;iframe style=&quot;display: block; margin-left: auto; margin-right: auto;&quot; src=&quot;https://giphy.com/embed/V2Ylf5EhsUPMQ&quot; width=&quot;440&quot; height=&quot;184&quot; frameborder=&quot;0&quot; class=&quot;giphy-embed&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
+&lt;p&gt;&lt;a href=&quot;https://giphy.com/gifs/reactiongifs-request-redditors-V2Ylf5EhsUPMQ&quot;&gt;via GIPHY&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;…engineering!&lt;/p&gt;
+
+&lt;p&gt;In the &lt;a href=&quot;https://theantennaguy.github.io/gnss-active-antenna/&quot;&gt;last post&lt;/a&gt;, I described the antenna portion design. In this post I explain the LNA (Low Noise Amplifier) part, the design steps and the measurement results of the prototype.&lt;/p&gt;
+
+&lt;p&gt;I mentioned in the last post that for the LNA design I’ve chosen the BFP640FESD low noise BJT transistor from Infineon. Because Infineon has good documentation, has support files for simulation, it’s cheap and I had it available - problem is sometimes I trust too much on my memory, and when the PCBs for this board arrived, I realized I had not the BFP640FESD, but the BFP740F!&lt;/p&gt;
+
+&lt;iframe style=&quot;display: block; margin-left: auto; margin-right: auto;&quot; src=&quot;https://giphy.com/embed/IgdrGRwsetYRWirDsj&quot; width=&quot;480&quot; height=&quot;198&quot; frameborder=&quot;0&quot; class=&quot;giphy-embed&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
+&lt;p&gt;&lt;a href=&quot;https://giphy.com/gifs/snl-saturday-night-live-season-45-IgdrGRwsetYRWirDsj&quot;&gt;via GIPHY&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Oh well, I’ll explain the design steps with the BFP640FESD and use this opportunity to show what I checked and verified the impact of adapting the existing board and matching networks to the BFP740F instead of the BFP640F.&lt;/p&gt;
+
+&lt;p&gt;Alright, so first step is to download the S-parameter files for the transistor. Otherwise, it’s also possible to use the component models for SPICE, Keysight ADS or AWR Microwave Office - good guy Infineon having the support for all the tools. With the latter two, one can use non-linear simulations and make a more refined design. However, I’ll keep it simple and go for the design steps using the linear models (S-parameters) and design the LNA with those only. This is possible for LNAs, especially for a GNSS application, where power levels are so low that we are sure to be operating in a linear range of operation of the transistor. It would be more risky to assume something like this when designing a PA (Power Amplifier).&lt;/p&gt;
+
+&lt;p&gt;The S-parameter folder from Infineon has a bunch of files with the parameters of the transistor for different bias levels. Therefore, the first step is to choose the right bias point. For that we look into the datasheet and check the gain and noise figure plots and determine the preferable bias that will give us the operation parameters we want. The following pictures are taken from the &lt;a href=&quot;https://www.infineon.com/dgdl/Infineon-BFP640FESD-DS-v02_00-EN.pdf?fileId=5546d462689a790c01690f03c65d392e&quot;&gt;transistor’s datasheet&lt;/a&gt; and show the variation of the Noise Figure and Gain with the collector current for a bias voltage of 3 V:&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th style=&quot;text-align: center&quot;&gt;&lt;img src=&quot;/images/post14/noise-figure.png&quot; alt=&quot;noisef&quot; /&gt;&lt;/th&gt;
+      &lt;th style=&quot;text-align: center&quot;&gt;&lt;img src=&quot;/images/post14/gain.png&quot; alt=&quot;gain&quot; /&gt;&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;Noise figure with collector current&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;Gain with collector current&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;From the plot on the left we can see the minimal NF is attained with a low collector current, but the gain is smaller for lower currents. The compromise is to have the collector current (IC) between 20 and 30 mA. This provides a noise figure between 0.9 and 1.1 dB and a gain between 26 and 28 dB. Something in between would be preferable, but since Infineon only provides S-parameters for the 20 and 30 mA, we have to go with either one or the other and I’ll choose to go with higher gain IC = 30mA.&lt;/p&gt;
+
+&lt;p&gt;We fetch the S-parameters file corresponding to that bias point and from here I’ll be using &lt;a href=&quot;http://qucsstudio.de/&quot;&gt;QUCStudio&lt;/a&gt; for designing the matching networks and bias networks for the circuit. First I load the corresponding S-parameters to QUCSstudio and check the stability, noise and gain circles.&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th style=&quot;text-align: center&quot;&gt;&lt;img src=&quot;/images/post14/sparams.png&quot; alt=&quot;sparams&quot; /&gt;&lt;/th&gt;
+      &lt;th style=&quot;text-align: center&quot;&gt;&lt;img src=&quot;/images/post14/stability.png&quot; alt=&quot;stability&quot; /&gt;&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;S-parameters&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;Stability&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;&lt;img src=&quot;/images/post14/sparams_smith.png&quot; alt=&quot;sparamsmith&quot; /&gt;&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;&lt;img src=&quot;/images/post14/circles.png&quot; alt=&quot;circles&quot; /&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;S-parameters&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;Gain and Noise circles&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;First, from the stability results we can see the transistor is unconditionally stable, that is, $\mathit{K}$ and $\mu$ &amp;gt; 1 and $\Delta$ &amp;lt; 1, this is good since we can design the matching networks for the noise/gain we want and don’t have restrictions with stability of the amplifier. To obtain the $\mathit{K}$, $\mu$ and $\Delta$ parameters we place equations in QUCS schematic as I show in the final circuit figure further down this post. The equations for the Rollet’s stability criterion ($\mathit{K}$-factor) and the Edwards-Sinsky stability criterion ($\mu$-factor), as found in &lt;a href=&quot;https://www.wiley.com/en-us/Microwave+Engineering%2C+4th+Edition-p-9780470631553&quot;&gt;Pozar’s&lt;/a&gt;:&lt;/p&gt;
+
+\[K=\frac{1-|S_{11}|^2|-S_{22}|^2+|\Delta|^2}{2|S_{12}S_{21}|}\]
+
+\[\Delta=S_{11}S_{22}-S_{12}S_{21}\]
+
+\[\mu=\frac{1-|S_{11}|^2|}{|S_{22}-S_{11}^*\Delta|+|S_{12}S_{21}|}\]
+
+&lt;p&gt;You can look into the book to know how you come to these criteria, but the principle is that if the Rollet’s stability criteria or the Edwards-Sinsky criteria are met, meaning the $\mathit{K}$ and $\mu$ are above 1, the transistor is unconditionally stable. When this does not happen, then the input and output matching networks need to be carefully designed in order to avoid getting an oscillator instead of a transistor.&lt;/p&gt;
+
+&lt;p&gt;Next, we look into the Gain and Noise circles, these are generated for a NF (Noise Figure) &amp;lt; 1.5 and a Gain &amp;gt; 26 dB. There’s a zone where both these circles intersect each other. If we design our input network to match any impedance in this zone, and then design the output matching network for the complex match, we get a noise figure below 1.5 and a gain above 26 dB. For reference, I also plotted there the ‘Sopt’ which is the optimal impedance for minimum noise, which is why it is right in the center of the Noise circle. Luckily, this spot falls right in the intersection between our noise and gain circles, and besides, it is a real impedance (no imaginary part), which means a simple $\lambda$/4 line can be used to match it. These pieces seem the be falling into place quite nicely…&lt;/p&gt;
+
+&lt;iframe style=&quot;display: block; margin-left: auto; margin-right: auto;&quot; src=&quot;https://giphy.com/embed/l2Je6sbvJEn1W9OWQ&quot; width=&quot;430&quot; height=&quot;328&quot; frameborder=&quot;0&quot; class=&quot;giphy-embed&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
+&lt;p&gt;&lt;a href=&quot;https://giphy.com/gifs/season-3-the-simpsons-3x11-l2Je6sbvJEn1W9OWQ&quot;&gt;via GIPHY&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;To get the noise and gain circles in QUCStudio, run a S-parameter simulation for a single frequency, in this case I did for 1.575 GHz, place a smith chart into the data analysis pane and plot the ‘GaCircle(x)’ and the ‘noiseCircle(y)’, where the ‘x’ and ‘y’ parameters are the gain and noise you want in &lt;strong&gt;linear form&lt;/strong&gt;!&lt;/p&gt;
+
+&lt;p&gt;We use the line calculator embedded into QUCS to calculate that line characteristics for the input match, we know it has to have an impedance of $\sqrt{50 \times 32} = 40 \Omega$:&lt;/p&gt;
+
+&lt;p style=&quot;text-align: center;&quot;&gt;&lt;img src=&quot;/images/post14/line_section_1.png&quot; alt=&quot;lambda4&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;After adding this line section to the circuit input and simulating, we get the following results for the S-parameters:&lt;/p&gt;
+
+&lt;p style=&quot;text-align: center;&quot;&gt;&lt;img src=&quot;/images/post14/sparams_after_input.png&quot; alt=&quot;sparams2&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;From here, we just need to do matching of the output impedance to the complex conjugate in order to get maximum power transfer, therefore, to match the impedance of 45.6-j40. This impedance is really close to 50 Ohm, hence we’ll just add a series inductor to bring it upwards in the direction of the circle center. I could do some calculations to determine the correct value of inductor to match this impedance, but my lazy ass we’ll do it the lazy way, I just add the inductor to the circuit and click “Tune” to vary the inductor value and iteratively see in the smith chart the output match moving. Which led me to a value of 6 nH and the resulting final S-parameters:&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th style=&quot;text-align: center&quot;&gt;&lt;img src=&quot;/images/post14/sparams_final.png&quot; alt=&quot;sparamsf&quot; /&gt;&lt;/th&gt;
+      &lt;th style=&quot;text-align: center&quot;&gt;&lt;img src=&quot;/images/post14/sparams_final_smith.png&quot; alt=&quot;sparamsfsmith&quot; /&gt;&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;Final S-parameters (Cartesian)&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;Final S-parameters (Smith chart)&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;Rending a final circuit that looks like this:&lt;/p&gt;
+
+&lt;p style=&quot;text-align: center;&quot;&gt;&lt;img src=&quot;/images/post14/final_circuit.png&quot; alt=&quot;circuit&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Notice the 22 pF caps at each side are DC blocks for the biasing voltages of the transistor. The high capacitance has little effect at the working frequency, but still they impose some effect, so I added those and always simulated with them so I was designing having that small effect of the DC blocks in consideration and not be surprised later on.&lt;/p&gt;
+
+&lt;p&gt;Another important thing is that the inductor in the previous circuit is ideal, which is not realistic, all components have parasitics, hence it’s important to simulate this with a more realistic model for the inductor. And using touchstone files with the measured S-parameters from the inductor supplier is a good option. So I loaded the S-parameters from a Murata inductor, and soon realized I had to use a smaller inductor value to obtain the match I was hoping for, ending up with a 5.1 nH, 0402 SMD packaged, multi-layers type inductor. Rending the final result:&lt;/p&gt;
+
+&lt;p style=&quot;text-align: center;&quot;&gt;&lt;img src=&quot;/images/post14/sparams_final_wRealcomponent.png&quot; alt=&quot;sparamsf2&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;A gain of above 26 dB and a NF of 1.13 in the L1 band looks good. Now the second part is to determine the circuit to make to correct bias to the transistor, that is, VCE = 3V and IC = 30 mA. For that we fill in the SPICE parameters of the transistor (can be found in Infineon application notes), and then tune the base and collector resistors to get the correct VCE voltage and collector current, as follows:&lt;/p&gt;
+
+&lt;p style=&quot;text-align: center;&quot;&gt;&lt;img src=&quot;/images/post14/bias-circuit.png&quot; alt=&quot;bias&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;In this case, I come up to the values for R1, R2 and R3 as you see in the picture above, which for 3.3 V of input voltage, render a VCE of 3.01 V and IC of 29.4 mA, pretty close!&lt;/p&gt;
+
+&lt;p&gt;Well, and that’s it. We have finished our LNA!&lt;/p&gt;
+
+&lt;p&gt;Now, remember the part where I said I screwed up and I actually had a different part in my stock? Yeah. I had BFP740F not the BFP640F… Good thing is that these transistor are not that different, even though the BFP740F is more tailored for applications around 2.4 GHz, it can still prove worthy in 1.575 GHz. Let’s check again the gain and NF plots on the datasheet, check S-parameters for the best bias point and then determine the correct bias resistors to achieve that bias point.&lt;/p&gt;
+
+&lt;p&gt;For the BFP740F the best spot seems to be anywhere with VCE between 2 and 3V and IC between 15 to 20 mA. I decided to go with VCE of 2.5 V and IC of 15 mA.&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th style=&quot;text-align: center&quot;&gt;&lt;img src=&quot;/images/post14/noise-figure2.png&quot; alt=&quot;noisef2&quot; /&gt;&lt;/th&gt;
+      &lt;th style=&quot;text-align: center&quot;&gt;&lt;img src=&quot;/images/post14/gain2.png&quot; alt=&quot;gain&quot; /&gt;&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;Noise figure with collector current&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;Gain with collector current&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;For that we need the following bias values:&lt;/p&gt;
+
+&lt;p style=&quot;text-align: center;&quot;&gt;&lt;img src=&quot;/images/post14/bias-circuit2.png&quot; alt=&quot;bias2&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;As for matching, since I couldn’t change the input matching line, I just checked what would be the final performance of the amplifier in terms of Noise Figure, and adjusted the output matching network for maximum possible gain - which I realized is actually no output matching network at all!&lt;/p&gt;
+
+&lt;p&gt;&lt;img style=&quot;display: block; margin-left: auto; margin-right: auto;&quot; src=&quot;/images/post14/surprised-pikachu.png&quot; width=&quot;400&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;So, with the previously designed input matching network (a $\lambda /4$ transmission line) and no output matching at all, the final S-parameters of the LNA looked like the following:&lt;/p&gt;
+
+&lt;p style=&quot;text-align: center;&quot;&gt;&lt;img src=&quot;/images/post14/sparams_final_bfp740f.png&quot; alt=&quot;sparams_f&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;With a final NF of 1.02 and a gain of 26.4 dB, I find these results very hard to believe. So I’ll have to test the board and see how it ended up in the real thing &lt;em&gt;Crossing my fingers&lt;/em&gt;. Next post will be about the construction of the whole thing and the measurements of the prototype. Hopefully won’t take so long to come out as this post.&lt;/p&gt;
+
+&lt;p&gt;Stay tuned!&lt;/p&gt;</content><author><name></name></author><summary type="html">Alright, here we are for the second part of the GNSS active antenna design. This time it didn’t took so long to get a new post release into the blog. I guess it’s because I haven’t been doing any online courses or anything, so more free time to play around with</summary></entry><entry><title type="html">Active GNSS antenna design (Part I)</title><link href="http://localhost:4000/gnss-active-antenna/" rel="alternate" type="text/html" title="Active GNSS antenna design (Part I)" /><published>2022-09-01T00:00:00+01:00</published><updated>2022-09-01T00:00:00+01:00</updated><id>http://localhost:4000/gnss-active-antenna</id><content type="html" xml:base="http://localhost:4000/gnss-active-antenna/">&lt;p&gt;Once again, it’s been a long time. I should really devote more time to this blog… Well anyway, let’s get back to business! This time I’m posting about a little project I’ve been doing to support some activities at work. So, we’ve been working on some stuff with GNSS, but this time the receiver is designed to operate with an internal antenna as well as an external antenna, which can (should) be active and it is supplied through the coaxial cable. It is supplied through a dedicated LDO and has a bias tee network in place, so that it is perfectly isolated from the rest of the circuit to avoid noise from our circuit to sneak into the GNSS chain and screw the reception.&lt;/p&gt;
+
+&lt;p&gt;So, to test this device with an external antenna we need to acquire an external GNSS antenna and especially an active one. Of course, we did buy one, like this one here:&lt;/p&gt;
+
+&lt;p style=&quot;text-align: center;&quot;&gt;&lt;img src=&quot;/images/post13/gnss_antenna_example.png&quot; alt=&quot;gnss-ant&quot; width=&quot;300&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;But I thought to myself, well I think I can make a similar, or even better, performance antenna for a similar price. Plus, that would be a nice little project I could do and would give a nice addition to my blog posts! And here we are…&lt;/p&gt;
+
+&lt;p&gt;When it comes to GNSS antennas there’s a myriad of solutions. Let me cover briefly some of these, knowing very well there’s more to each of the solutions and even sub-types within some of these options, but let’s keep it simple:&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;Ceramic patch antenna - The ceramic patch antenna is the most common type of integrated antenna for small GNSS receiver systems. It’s compact size make it suitable for integration into portable devices. They have a reasonable gain and polarization purity, not exiling in either, they do a decent job. We’d need to make a PCB to integrate this antenna then add the amplifier and connector, no fun. Since we have a good volume availability, the ceramic patch antenna is not the best course of action. Designing one could be an option, but manufacturing can be expensive since the access to the ceramic substrates is limited.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p style=&quot;text-align: center;&quot;&gt;&lt;img src=&quot;/images/post13/ceramic_antenna.png&quot; alt=&quot;gnss-ant_1&quot; width=&quot;300&quot; /&gt;&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Chip antenna - The chip antenna is also a common type of integrated antenna for GNSS receiver systems. As the ceramic patch, it’s main advantage is the very compact size, even smaller than the ceramic patch. But it comes at the cost of sacrificing gain as well as proper polarization. As well, designing a specific solution of this type could be very difficult (expensive) to manufacture. Here’s an example of a Yageo chip antenna taken from &lt;a href=&quot;https://rutronik-tec.com/gps-ceramic-chip-antenna-yageo-ant6230ll01r1575a/&quot;&gt;here&lt;/a&gt;:&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p style=&quot;text-align: center;&quot;&gt;&lt;img src=&quot;/images/post13/chip_antenna.jpg&quot; alt=&quot;gnss-ant_2&quot; width=&quot;200&quot; /&gt;&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Helical antenna - The helical antenna is many times found inside a monopole sleeve and make it look like a monopole antenna, but it is actually an helical antenna, which is usually linearly polarized. The gain is directly proportional to the length of the antenna which makes it hard to fit such a solution into our target volume (which is detailed further on). The balun is also tricky to design and can cut the bandwidth requirements short, besides it’s not easy to integrate the amplifier in this design.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p style=&quot;text-align: center;&quot;&gt;&lt;img src=&quot;/images/post13/helical_antenna.png&quot; alt=&quot;gnss-ant_3&quot; width=&quot;300&quot; /&gt;&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Chocked ring antenna - These are typically the highest gain GNSS antennas. With directivity above 12 dBi, sometimes 15 dBi and integrated LNAs with gains in the order of 20-40 dB, these are GNSS antennas for sensitive applications and military applications. They provide very high accuracy. But, they’re usually big and heavy and are mostly targeted for fixed applications, more so given the aperture is usually small and requires some pointing during installation. Manufacturing such a solution, given its metal structure is also not cheap. Here’s an example taken from &lt;a href=&quot;https://www.navtechgps.com/novatel_gnss_750_wideband_choke_ring_antenna/&quot;&gt;Novatel&lt;/a&gt;:&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p style=&quot;text-align: center;&quot;&gt;&lt;img src=&quot;/images/post13/chocked_ring_antenna.png&quot; alt=&quot;gnss-ant_4&quot; width=&quot;300&quot; /&gt;&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Turnstile antenna - The turnstile antenna uses two orthogonal dipoles fed with 90º of phase in between each other in order to obtain the circular polarization, a second set of dipoles is fed with inversion of phase in order to direct the radiation pattern in the intended direction. Using the image principle, the second dipole set can be replaced by a ground plane. This is a possible solution, since this solution can be planarized in a PCB, the only downside is to achieve the correct gain with the limited height available.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p style=&quot;text-align: center;&quot;&gt;&lt;img src=&quot;/images/post13/turnstile_antenna.png&quot; alt=&quot;gnss-ant_5&quot; width=&quot;220&quot; /&gt;&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Quadrifilar antenna - The quadrifilar antenna is a mix between the turnstile and the helical antenna, essentially the dipole elements of the turnstile are twisted along the propagation direction, like in the helical antenna. For us is not applicable for the same reason as the helical antenna. Save for the balun, which is non-existent in this case.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p style=&quot;text-align: center;&quot;&gt;&lt;img src=&quot;/images/post13/quadrifilar_antenna.png&quot; alt=&quot;gnss-ant_6&quot; width=&quot;250&quot; /&gt;&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Spiral antenna - The equiangular planar spiral falls in the category of “frequency-independent” antennas due to its very large bandwidth. The antenna is circularly polarized but its purity is dependent on the feeding arrangement. Since the basic element radiates equally in both hemispheres, a ground plane is usually needed to point the pattern in the right direction. The drawback is that spiral antennas do not provide high gain, this solution might still be viable, counting that we can achieve the required gain.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p style=&quot;text-align: center;&quot;&gt;&lt;img src=&quot;/images/post13/spiral_antenna.png&quot; alt=&quot;gnss-ant_7&quot; width=&quot;250&quot; /&gt;&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Parabolic antenna - A widely known antenna type, but very bulky and nearly impossible to make fit inside the requirement volume package, and also, not a possible solution in terms of manufacturing. Here’s an example from a &lt;a href=&quot;https://www.directindustry.es/prod/intellisystem-technologies/product-177774-1855686.html&quot;&gt;Spanish supplier&lt;/a&gt;.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p style=&quot;text-align: center;&quot;&gt;&lt;img src=&quot;/images/post13/parabolic_antenna.png&quot; alt=&quot;gnss-ant_8&quot; width=&quot;250&quot; /&gt;&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Phased array antenna - This is the most advanced and complex option. It’s the solution that is capable to provide a performance comparable to the radome and the chocked ring antennas without the drawback of adjustments. But this is also a bulky solution and very complex with processing units and gain/phase adjusting elements. This is nearly impossible to fit inside the volume package required, and the cost and effort are tremendous, maybe some day I’ll venture into building such an antenna in a hobbyist approach, but not this time. &lt;a href=&quot;https://blogs.3ds.com/simulia/functional-design-satellite-communication-satcom-antennas/&quot;&gt;Here’s an article&lt;/a&gt; advocating for the development of phased array solutions for satellite comm systems from Simulia (owner’s of CST software).&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p style=&quot;text-align: center;&quot;&gt;&lt;img src=&quot;/images/post13/phased_array.png&quot; alt=&quot;gnss-ant_9&quot; width=&quot;300&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Having analyzed the typical antennas that can be used for GNSS antennas, the choice has fallen upon two candidates:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Printed microstrip antenna with an air core, instead of ceramic.&lt;/li&gt;
+  &lt;li&gt;Printed turnstile antenna with a ground plane instead of mirror dipoles.
+And the second option was discarded because I’m not very good with artisanship, and a turnstile antenna is all about artisanship, so I’d end with a piece of metallic crap instead of an antenna, if I know me.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;So, let’s define the requirements for this antenna:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Frequency band: 1575 - 1610 MHz&lt;/li&gt;
+  &lt;li&gt;Maximum size: 100 x 100 x 20 mm&lt;/li&gt;
+  &lt;li&gt;Maximum weight: 300 g&lt;/li&gt;
+  &lt;li&gt;Passive gain: &amp;gt; 6 dBi&lt;/li&gt;
+  &lt;li&gt;Polarization: RHCP&lt;/li&gt;
+  &lt;li&gt;Active gain: &amp;gt; 20 dB&lt;/li&gt;
+  &lt;li&gt;Noise figure: &amp;lt; 1.5 dB&lt;/li&gt;
+  &lt;li&gt;VSWR: 2:1&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Now, there’s also another rule for this challenge, the antenna must be designed and integrated into PCBs, so it is easier and cheaper to manufacture. Therefore, the use of ceramic patch antennas is not allowed. Also, the LNA (Low Noise Amplifier) must also be designed around a transistor, it doesn’t count to use a pre-packaged integrated LNA, otherwise where would be the fun?!&lt;/p&gt;
+
+&lt;p style=&quot;text-align: center;&quot;&gt;&lt;img src=&quot;/images/post13/funny.gif&quot; alt=&quot;funny&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;If I wanted to make it easier (and probably better), it would be preferable to opt for an integrated LNA like the &lt;a href=&quot;https://www.infineon.com/cms/en/product/rf/low-noise-amplifier-lna-ics/gps-glonass-compass-lna/bga524n6/&quot;&gt;BGA524N6&lt;/a&gt; from Infineon. But instead, we’re going to design a LNA around a &lt;a href=&quot;https://www.infineon.com/cms/en/product/rf/rf-transistor/low-noise-rf-transistors/bfp640fesd/&quot;&gt;BFP640FESD&lt;/a&gt;, which is a HBT (Heterojunction Bipolar Transistor) tailored for low noise applications. The reason I chose this particular transistor is because I had it already in my component box without any destination and because it fits well this application.&lt;/p&gt;
+
+&lt;p&gt;To make this post shorter and to make it come out quicker, in this one I’ll focus only on the antenna design and results, on a next post I will focus on the LNA design and on the making of a housing for the antenna and integration of everything.&lt;/p&gt;
+
+&lt;p&gt;The antenna, well it’s an air-core microstrip patch antenna, similar to the one I’ve shown in previous posts for the &lt;a href=&quot;https://theantennaguy.github.io/microstrip-patch-air-core-1/&quot;&gt;RFID reader&lt;/a&gt;…&lt;/p&gt;
+
+&lt;p style=&quot;text-align: center;&quot;&gt;&lt;img src=&quot;/images/post13/sucks.gif&quot; alt=&quot;sucks&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;but with some minor twists!&lt;/p&gt;
+
+&lt;p style=&quot;text-align: center;&quot;&gt;&lt;img src=&quot;/images/post13/impressive.gif&quot; alt=&quot;bortus&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;I have to agree with officer Bortus here, it’s not very impressive, but that’s that. We want cheap, simple, functional and accurate without being a master artisan, there’s no way around it.&lt;/p&gt;
+
+&lt;p&gt;So the patch antenna itself is a ring antenna. Why a ring? Well, to use a square, I’d either have to rotate the coupler by 45º, or make some weird lines out of those ports (adding losses), because rotating the patch would make it impossible to fit within the 100x100 mm square PCB space. A circular shape gives me much more flexibility, but still the point is that I chose a ring instead of a filled circular shape. Remember my post about compensating the inductance of long feed points in air-core microstrip antennas? No? Shame on you, &lt;a href=&quot;https://theantennaguy.github.io/microstrip-patch-air-core-3/&quot;&gt;go check it out&lt;/a&gt;. Now, there’s another way to compensate for that added inductance from the feeding which is creating not a small, but a large slot in the middle of the patch. This works particularly well in circular patches, because the electric path through the middle of the antenna is increased smoothly. And that’s it.&lt;/p&gt;
+
+&lt;p&gt;As in the case of the RFID antenna I’ve used a double feed with a hybrid coupler, but this time I dimensioned the lines to work at 1.575 GHz and were designed for a 0.8 mm (cheapest possible option after the 1.6 mm ones) thick FR-4 substrate. Here’s the pictures:&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th style=&quot;text-align: center&quot;&gt;&lt;img src=&quot;/images/post13/3D_2.png&quot; alt=&quot;front&quot; /&gt;&lt;/th&gt;
+      &lt;th style=&quot;text-align: center&quot;&gt;&lt;img src=&quot;/images/post13/3D_1.png&quot; alt=&quot;back&quot; /&gt;&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;Front view&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;Back view&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;I’m not gonna bother you very much with the design process details, as I said above you can check my &lt;a href=&quot;https://theantennaguy.github.io/microstrip-patch-air-core-3/&quot;&gt;previous post&lt;/a&gt; about the air-core microstrip antenna, and you’ll get a good feeling on how to go about designing this one. To keep it short, here goes the simulation results for this antenna with the coupler included:&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th style=&quot;text-align: center&quot;&gt;&lt;img src=&quot;/images/post13/antenna_sparam_db.png&quot; alt=&quot;sparamdb&quot; /&gt;&lt;/th&gt;
+      &lt;th style=&quot;text-align: center&quot;&gt;&lt;img src=&quot;/images/post13/antenna_sparam_smith.png&quot; alt=&quot;sparamsmith&quot; /&gt;&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;S-parameters cartesian plot&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;S-parameters Smith chart&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;And here’s the resulting radiation pattern:&lt;/p&gt;
+
+&lt;p style=&quot;text-align: center;&quot;&gt;&lt;img src=&quot;/images/post13/3D_rad.png&quot; alt=&quot;radiation&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;From the results we can we see we have a pretty decent bandwidth, covers all the L1 frequencies with margin. The antenna also shows a decent radiation gain and a very pure circular polarization, given the RHCP component have nearly the same gain in dBis as the total gain component (check the left bottom corner data on the [radiation] picture). That can also be shown in this plot of the gain and the axial-ration with frequency:&lt;/p&gt;
+
+&lt;p style=&quot;text-align: center;&quot;&gt;&lt;img src=&quot;/images/post13/gain_ar.png&quot; alt=&quot;radiation2&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;As you can see the gain is above 6 dBi around all band and the axial ratio is below 3 (actually even 2) dB around all band as well, between 1.55 to 1.63 GHz to be precise, which gives us plenty of margin for error!&lt;/p&gt;
+
+&lt;p&gt;At the time of this writing, I’ve already sent this design for manufacturing. As usual you can find these in my GitHub repository for antenna designs. Next post I’ll focus on the LNA section design and eventually I’ll show the assembly of everything and the measurements of the prototype.&lt;/p&gt;
+
+&lt;p&gt;So stay tuned folks!&lt;/p&gt;</content><author><name></name></author><summary type="html">Once again, it’s been a long time. I should really devote more time to this blog… Well anyway, let’s get back to business! This time I’m posting about a little project I’ve been doing to support some activities at work. So, we’ve been working on some stuff with GNSS, but this time the receiver is designed to operate with an internal antenna as well as an external antenna, which can (should) be active and it is supplied through the coaxial cable. It is supplied through a dedicated LDO and has a bias tee network in place, so that it is perfectly isolated from the rest of the circuit to avoid noise from our circuit to sneak into the GNSS chain and screw the reception.</summary></entry><entry><title type="html">Attempting to clean the dust</title><link href="http://localhost:4000/negotiating-for-sucess/" rel="alternate" type="text/html" title="Attempting to clean the dust" /><published>2022-04-18T00:00:00+01:00</published><updated>2022-04-18T00:00:00+01:00</updated><id>http://localhost:4000/negotiating-for-sucess</id><content type="html" xml:base="http://localhost:4000/negotiating-for-sucess/">&lt;p&gt;Hey there folks. It’s been a long long time since I updated anything on this blog. I thought there was no real reason to not update this more frequently, but now that I think about it: There’s been a side project, from which I cannot disclose anything, I’ve also spent more time with physical conditioning and with learning music, and most probably because I’ve spent most of 2021 dedicated to do online courses. This post is my attempt to break the cycle, however, the problem is that I have dedicated less time to studying new papers or anything interesting related to engineering, hence I have no topic on Antennas or RF to put up. Still, I realized that the purpose to start this blog was to get me to write more, because it is something that I like to do, and since it is my personal space, I can use to write about anything I deem interesting and it doesn’t necessarily need to be about antennas anyway.&lt;/p&gt;
+
+&lt;p&gt;So I decided to write a new blog post and talk about some of the online courses I did last year, and what I learned from them. This is also a great practice to refresh the material and make sure I keep this knowledge for the future.&lt;/p&gt;
+
+&lt;p&gt;One of the online courses, from Coursera, that I successfully concluded last year was &lt;a href=&quot;https://www.coursera.org/learn/negotiation-skills&quot;&gt;Successful Negotiation: Essential Strategies and Skills&lt;/a&gt;. This course is rather light, but really well made. The instructor, Prof. George Siedel, has a very clear and well paced discourse, with several examples, there’s also a simple practicing exercise and some videos on types of arbitration, which are used frequently on business negotiations. I ended up buying his book &lt;a href=&quot;https://www.amazon.com/Negotiating-Success-Essential-Strategies-Skills-ebook/dp/B00OE85SDS/ref=sr_1_1?keywords=negotiating+for+success&amp;amp;qid=1645963273&amp;amp;sprefix=negotiating+for+s%2Caps%2C143&amp;amp;sr=8-1&quot;&gt;Negotiating for Success&lt;/a&gt;, which I got for a little more than 10€. Now, I’m no business man and I certainly don’t pretend to shift my career to sales or anything like that, but truth is we all need to negotiate at some point in our life, this already helped me last year when I bought my new house and had to deal with banks, calling several banks, discussing proposals and negotiating terms for the Home loan, therefore making sure I was getting the best possible deal from each bank.&lt;/p&gt;
+
+&lt;p&gt;The course breakdown into three major sections:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Preparing the negotiation&lt;/li&gt;
+  &lt;li&gt;Using key strategies and tactics&lt;/li&gt;
+  &lt;li&gt;Closing the negotiation and establishing contract&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;In the first stage, while ‘Preparing the negotiation’ one of the first assessments is to actually decide if its wise/worth it to negotiate or not. In many situations we don’t negotiate at all, such as a trip to the supermarket, even though, apparently (at least in the USA) it’s possible to haggle in these establishments as well. We usually think about negotiations when we think about buying a used item from some listing on the internet, like a used car, bicycle or a kitchen robot. But even on new items, like buying a new TV for instance, where it’s more plausible to negotiate than a supermarket, particularly if you go to a specialized store and not a big retail, we often just pay the price tag because we think there’s no negotiation margin in these stores, while that’s most of the times false, be it USA or Europe. But here enters the other side of the question: Is it worth it? It’s a matter of time! Let’s suppose you’re on the hunt for a new vacuum robot (I am), you must spend time, preparing the negotiation such as getting well informed about the specs of these robots, you also need some time to evaluate the prices on several stores (even though there are websites these days that make it easier for you), take note of those, and then actually go to the store and bargain, maybe even move to another store. So this all takes time. Let’s say you spend 2 hours browsing info on those robots, then 1 hour collecting prices and making notes, then you go to two stores, spend 1 hour in each for negotiations to get a 50€ discount on that vacuum robot. This means you spent 5 hours to obtain 50€ discount, 10€/h is not a bad rating, but was it absolutely worth it? Or would you much rather simply pay the highest price and use those 5 hours doing something else? Well that’s the kind of exercise one should do in this stage.&lt;/p&gt;
+
+&lt;p&gt;The second step on ‘Preparing the negotiation’ is to determine the type of negotiation. There are two types of negotiation: Position-based negotiation and interest based negotiation, with two possible goals, either to do a deal or resolve a dispute. In a position-based negotiation, both parties set out with the goal to achieve an equality result out, while in interest-based negotiation, both parties explore how to get a more equitable result. These two types are also commonly referred to as “distributive” and “integrative” negotiations, in a sense that the former is the search for dividing a fixed sized cake towards all intervenient, while the later is a search to increase the cake by looking at each party’s interests in particular. In the course and book a pizza example is used, but I’ll use a cake to illustrate. Suppose there’s a cake, and there’s Chell and GLaDOS to share it. In a position-based negotiation, both of them want the cake, so a proposal would be that Chell gets to cut the cake in two parts, and GLaDOS gets to chose which piece it wants. But, imagine that actually GLaDOS just wants the cherries and the candle, because they’re pretty and she’s not into eating anyway, while Chell would like the cake’s bread, she’s most probably starving anyway. If the interests are known, then each party can have a better piece of the cake, since Chell gets more cake to eat and GLaDOS can get all the cherries and candles in the cake.&lt;/p&gt;
+
+&lt;p style=&quot;text-align: center;&quot;&gt;&lt;img src=&quot;/images/post12/cake-is-a-lie.gif&quot; alt=&quot;the-cake&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Third step on ‘Preparing the negotiation’ is to do a negotiation analysis. This is the step where one defines their BATNA (Best Alternative to Negotiated Agreement), this is the benchmark for entering a negotiation. Let’s say I want to sell my car and I put up an add online. I’ve looked at prices and established the reasonable price for my car is 6000€, but I’ll still need to keep my car for a couple more months while I wait for my new car to arrive, in the meantime my cousin which just got his driving license, can buy my car for 5000€ and can perfectly wait a couple more months. I have my BATNA already, which is 5500€, because for less than that I much rather sell to my cousin. Nevertheless, one should always define a stretch goal, which is the price for which one would actually like to sell. This should be ambitious, but not over-stretched with risk to loose credibility on the business.&lt;/p&gt;
+
+&lt;p&gt;This is a simplistic scenario but the BATNA is actually useful in dispute resolutions. Here enters the concept of decision tree. Let’s say you belong to company X and are currently under a litigation process with company Y, you’re looking at possibly 4M€ in compensation if the court decides in your favor, and your attorney states there’s a 50% chance you can get the case in your favor. If you don’t win, you’ll be looking at 300k€ in legal fees and expenses. In this scenario, company Y offers a settlement of 2M€ to avoid taking the case to court, should you take it? A simple decision tree can help decide what’s your BATNA. This case is layed out in the following figure.&lt;/p&gt;
+
+&lt;p style=&quot;text-align: center;&quot;&gt;&lt;img src=&quot;/images/post12/decision-tree.png&quot; alt=&quot;decision-tree&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;In this case, if you go to court, the expected value you may get is the weighted average of the two possible outcomes. If you win you get 4M minus the expenses (3.7M), if you loose you just get the 300k expenses, since there’s 50% chance for winning, you arrive at an expected value of 1.7M€. Now, risk taking and emotional factors will impact your decision, but looking at this decision tree in a simple way, the settlement looks pretty good.&lt;/p&gt;
+
+&lt;p&gt;Last step in ‘Preparing the negotiation’ is related to ethical questions. That’s a whole world and in this course some main questions are raised, but it’s mostly common sense and regular morality. Ethics, however, can be a very complex subject.&lt;/p&gt;
+
+&lt;p&gt;Ok, now moving on to the point ‘Using key strategies and tactics’. The first one being developing relationships and power. That is, to get to know the other side on a more personal side, learn its aspirations and interests. Developing a more personal connection with the other party can render better results to the outcome of the negotiation (Who’d tell?). More precisely, the most effective way to build this relations and get better deals with a potential business partner is around a dining table, according to &lt;a href=&quot;https://hbr.org/2013/01/should-you-eat-while-you-negot&quot;&gt;Lakshmi Balachandra&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;One key takeaway from the course and the book itself which is reinforced deeply with the last exercise, is that when trying to built this relationship of power with the other side, the most important aspect is to ask questions, ask a lot of questions. Only by getting to know more information about the needs and aspirations of the other side one can build power based on the BATNAs. The first step being, understanding their BATNA. Then trying to find answer to the questions: How strong is the other side BATNA? Can I undermine it? Can I strengthen mine? Is there a possibility to make a winning proposition for both? Only by deeply understanding the other sides needs and goals, one can understand where is it possible to win, lose, or exchange, to get the deal.&lt;/p&gt;
+
+&lt;p&gt;On the ‘Using key strategies and tactics’, one section is dedicated to Key psychological tools and traps. As most of the material, this is only briefly covered in the course, but there’s references and pointers for a lot of books and materials on these topics if one ever finds the urge to dig deeper into them. In this section, nine tools are referenced:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Don’t assume a fixed pie: There’s this notion that in a negotiation, for one side to win, the other side must lose. This is a reflection of our competitive world where there’s the winners and the losers. But truth is, in negotiations, most times this is not the case. It’s possible to simply enlarge the pie, that is, to meet the goals of all parties and reach what’s commonly referred as a win-win situation. To do this, we need to avoid falling for a Reactive devaluation posture, where all proposals from the other side are degraded, without proper consideration, simply because they come from the other side.&lt;/li&gt;
+  &lt;li&gt;Consider anchoring when developing a first offer strategy: Anchoring is a tendency we humans have with relation to values. There’s this experiment explained in the course, to take the last three digits of our phone number and adding 400, then guess if Attila the Hun died after or before that year and guess the exact year. This experiment was developed by Russo and Schoemaker (funny name), and the conclusions were curious, the guesses were higher, the higher the higher the initial number of 400 + phone digits where. Hence, the anchoring effect, when we have no idea about a numerical fact, we tend to anchor on numbers that are given to us. Why is this relevant? Well, most businessmen and strategists will tell that you should never make the first offer, but the truth is not so simple. Actually it is quite complex and there’s already several studies related to the topic. In the course they give a simple rule that can be followed: When the value of the item in negotiation is unknown to you, ask the other side to make the first proposal, so you can gather information about the item’s value (but try to avoid as much as possible to anchor yourself around that value). However, if the value of the item is well known to you, then move with the first offer yourself, hence trying to anchor the other side to your values.&lt;/li&gt;
+  &lt;li&gt;Avoid overconfidence: Well this one does not require much explanation. But, again, it’s a complex topic, overconfidence is bad, but can be good… and there’s literally tons (if you print and weight all the papers on the subject) of research on the topic. The course gives a good separation: Overconfidence is good for decision implementation, but for decision making, realism is the winning trait.&lt;/li&gt;
+  &lt;li&gt;Frame choices to your advantage: The way questions are framed and presented to people can trick them. If you’re slightly autistic and have a mind for numbers over letters, you’ll probably not have this problem. I noticed that about myself, during an exercise on the topic, I exclaimed to myself “Oh, but they’re proposing exactly the same thing, they’re just framing the solution in a different manner…”, and that was the exact trap, when I thought “what the heck, who’d not see that? They’re just swapping good for bad, but the numbers are exactly the same!”. I’m so naive, of course most people don’t look at the numbers, people are scared of numbers, people tend to shy away from a fraction or a % symbol, and try to find the answer somewhere in the words (fools). I always look for the numbers and don’t meddle in the words, so I don’t get lost in cases like this (but that comes at a cost on other situations). So, most people will tend to interpret the words without thinking deeply about the numbers, and this can be used as a tool - you should frame your sentences in a way that makes it seem like your proposal is better then it actually is and the other sides proposition has more flaws than it actually does.&lt;/li&gt;
+  &lt;li&gt;Look beyond easily-available information: People tend to think that information that is most often propagated is the most relevant. This is a huge trap, especially in the current days with the rampaging use of social-media apps full of ads and information shorts without proper context, most times coming from no authority, without any kind of revision, or ethics to follow. Don’t take that for granted, next time someone asks you if more people die of intestine cancer or car accidents per year, remember that approximately 670 people die due to car accidents in Portugal per year, while more then 3000 die of intestine cancer.&lt;/li&gt;
+  &lt;li&gt;Beware of dollar auction traps: This rule comes in three separate parts. Part one is to avoid escalation of commitment, that is, know when to drop out, don’t be afraid to do so. Part two is to avoid competitive arousal, that is, don’t bet! Don’t stick around to prove a point if there’s nothing to win. Part three is to see the other’s side perspective, easy to understand, very hard to accomplish.&lt;/li&gt;
+  &lt;li&gt;Encourage reciprocity: This one is a hard pill to swallow, even though I’ve seen examples of this to be true, sometimes. Principle is simple, be generous, give something to another, and others will want to repay you.&lt;/li&gt;
+  &lt;li&gt;Use the contrast principle: When I bought my first house, in a booming housing market, prices raising everyday and houses flying in and out of offer, I visited five houses in a single saturday and I called the real estate agent on the sunday confirming my intention to buy one of those, or I’d loose it the next day. I have zero regrets of that decision, mind you, but truth is, in another framework and in isolation, maybe I’d never have bought that house. It was the fifth house I visited that day. It was old, the kitchen was a wreck, one of the bathrooms was a mess, the floors of two rooms were in bad shape and the baseboard in the living room was lifting all around. You could be wondering, “Why did you buy it then?”, well, the four houses I visited before, where from slightly to astoundingly worst! Hence, by contrast, that house was the best house I’ve seen that day. Of course, there was a budget limit, and a time pressure, but still, in the end, that house didn’t look so bad compared to the previous examples. Contrast principle in a nutshell.&lt;/li&gt;
+  &lt;li&gt;Take a big-picture perspective: Easy to understand, hard to accomplish. Putting it simply - don’t get lost in the details and loose sight of the important goals.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;The last chapter is ‘Close you negotiation with a binding contract’ and as the name suggests it is about finalizing the negotiation having in consideration the legal framework and creating a contract that not only encompasses the terms required by the parties but that also abides by the law, be it in the country of the parties, or international law in case the negotiation is between international parties. In this section it is mentioned the two major types of legal systems in the world, the civil law and the common law. The civil law is the type of legal system found in the countries of the European Union for instance, while common law can be found in England, the USA and India for instance (and most ex-British colonies).&lt;/p&gt;
+
+&lt;p&gt;One curious thing about contracts is that this should be in writing, but it does not need to be a special document for the effect. Even an agreement written on a napkin can be enforced as a legal contract, considering it contains all the required elements for it to be considered a binding contract. That is, the both parties are clearly identified, the date of the deal is registered, and all the elements of the negotiation are listed as well as all signatures are in place… And maybe get a few witnesses to testify that all people involved celebrated it willingly.&lt;/p&gt;
+
+&lt;p&gt;Well, there’s a wealth of material on this topic, both on the course as well as out of it. But this is my attempt at summarizing the contents of the course, which by the length of this text already, I clearly missed the summary part.&lt;/p&gt;
+
+&lt;p&gt;That’s it for this post, I hope not to take so long until the next one.&lt;/p&gt;
+
+&lt;p&gt;Stay tuned!&lt;/p&gt;</content><author><name></name></author><summary type="html">Hey there folks. It’s been a long long time since I updated anything on this blog. I thought there was no real reason to not update this more frequently, but now that I think about it: There’s been a side project, from which I cannot disclose anything, I’ve also spent more time with physical conditioning and with learning music, and most probably because I’ve spent most of 2021 dedicated to do online courses. This post is my attempt to break the cycle, however, the problem is that I have dedicated less time to studying new papers or anything interesting related to engineering, hence I have no topic on Antennas or RF to put up. Still, I realized that the purpose to start this blog was to get me to write more, because it is something that I like to do, and since it is my personal space, I can use to write about anything I deem interesting and it doesn’t necessarily need to be about antennas anyway.</summary></entry><entry><title type="html">A new home!</title><link href="http://localhost:4000/A-New-Home/" rel="alternate" type="text/html" title="A new home!" /><published>2021-09-13T00:00:00+01:00</published><updated>2021-09-13T00:00:00+01:00</updated><id>http://localhost:4000/A-New-Home</id><content type="html" xml:base="http://localhost:4000/A-New-Home/">&lt;p&gt;I’ve been cooking the change from blogger to a GitHub pages for a while. My &lt;a href=&quot;https://thatantennaguy.blogspot.com&quot;&gt;blog&lt;/a&gt;, as well as my small personal projects, have been stalled for more than half a year now. Honestly, I don’t really know how to explain this absence and lack of time for anything. Somehow today I finally got the time and disposition to tackle this task and get back to do what should have been done quite a while ago. To setup my &lt;a href=&quot;https://theantennaguy.github.io&quot;&gt;personal page&lt;/a&gt; on GitHub pages and migrate the content of my blog to my github pages.&lt;/p&gt;
+
+&lt;p&gt;Stay tuned, I’ll be making my next post hopefully during November… I hope!&lt;/p&gt;</content><author><name></name></author><summary type="html">I’ve been cooking the change from blogger to a GitHub pages for a while. My blog, as well as my small personal projects, have been stalled for more than half a year now. Honestly, I don’t really know how to explain this absence and lack of time for anything. Somehow today I finally got the time and disposition to tackle this task and get back to do what should have been done quite a while ago. To setup my personal page on GitHub pages and migrate the content of my blog to my github pages.</summary></entry><entry><title type="html">Antenna tuning - How to juggle two bands</title><link href="http://localhost:4000/Antenna-tuning/" rel="alternate" type="text/html" title="Antenna tuning - How to juggle two bands" /><published>2021-01-11T00:00:00+00:00</published><updated>2021-01-11T00:00:00+00:00</updated><id>http://localhost:4000/Antenna-tuning</id><content type="html" xml:base="http://localhost:4000/Antenna-tuning/">&lt;p&gt;Hello folks. There’s been some time since I’ve written my last post. I’ve been very busy with work and other side projects, which eventually will find their way here, but since they’re far from completion, I thought to make a smaller post about a subject that is useful and I’ve had had in my notes for a long time. So I figured I’d just put it up on the blog so it could be useful as reference for someone, or even myself one of these days.&lt;/p&gt;
+
+&lt;p&gt;The subject is simple, how to tune a dual-band antenna. There’s a fair amount of articles and tutorials, even on YouTube, about matching networks, either LC and Pi networks. They’ll teach you all you need to know about Smith charts and what not. That’s all very useful, but they all have one problem, they usually focus on having impedance  $Z_1=R_1+jX_1$ Ω become  $Z_0$ Ω  at one single frequency. But how do you do it when your antenna is suppose to operate at two different frequency bands? How to tune both bands to 50 Ω  (or other complex frequency for that matter)?&lt;/p&gt;
+
+&lt;p&gt;It’s rather common if you think about it: WiFi systems operate at 2.4 GHz as well as 5 GHz frequency bands (and now since WiFi 6 has been introduced, the 6 GHz band has been added). So you got to have a frontend that operates in both bands, but you probably only want to use a single antenna for everything. A single antenna that covers the frequency range between 2.4 to 6 GHz is certainly possible, but not at the size you’d appreciate for a small embedded system. Mobile systems also, with GSM/GPRS, UMTS and LTE and now 5G bands coming into place, that’s lot of bands to cram into the smaller number of antennas possible. Small antennas are inherently narrowband, so the only option is to make them operate at the correct bands, to aid it, you have to design appropriate matching networks that make the antenna operate at all those multiple bands, and that means you need to juggle the matching at different frequencies.&lt;/p&gt;
+
+&lt;p&gt;Let’s try to make it simple and not delve into the black magic arts… seriously this is engineering!&lt;/p&gt;
+
+&lt;p style=&quot;text-align: center;&quot;&gt;&lt;img src=&quot;/images/post10/blackmagic.gif&quot; alt=&quot;Blackmagic-gif&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;I’m not going to go over the basic theory of LC matching networks, that can be found in microwave electronics books such as &lt;a href=&quot;https://www.wiley.com/en-pt/Microwave+Engineering%2C+4th+Edition%2C+International+Adaptation-p-9781119770619&quot;&gt;Pozar’s book&lt;/a&gt;, or other websites and even YouTube videos, I recommend W2AEW (aka Alan) videos, they’re super, &lt;a href=&quot;https://www.youtube.com/watch?v=IgeRHDI-ukc&quot;&gt;here’s&lt;/a&gt; his video about impedance matching networks. There’s even handy calculators out there to help you out, such as &lt;a href=&quot;http://leleivre.com/rf_lcmatch.html&quot;&gt;this one&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;What is lacking in most of these online resources, is that they focus on matching impedance $Z_A$ to impedance $Z_0$ at a single frequency. But when you’re dealing with multiband systems, you need to match two different impedances at two different frequencies to your system reference impedance (usually 50 Ω) . Certainly by learning the theory behind it, especially if you read the book, you can get there. And that’s essentially what I want to cover in this post, how you can use those concepts and apply them to this specific scenario of a dual band antenna.&lt;/p&gt;
+
+&lt;p&gt;Let’s take this simple PIFA for our purpose here. A very simple antenna, with regular printed antenna characteristics:&lt;/p&gt;
+
+&lt;p style=&quot;text-align: center;&quot;&gt;&lt;img src=&quot;/images/post10/pifa-antenna-1.png&quot; alt=&quot;Pifa-specs&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;If you notice the efficiencies plot, and as a refresher, the total efficiency is essentially the radiation efficiency minus the losses due to impedance mismatch, you realize the antenna has very good radiation efficiency at both frequency bands, but it suffers from poor impedance matching, which accounts for roughly 30% loss in efficiency. Instead of jeopardizing the radiation efficiency or require more PCB volume for the antenna area, we’ll improve the impedance match using a matching network.&lt;/p&gt;
+
+&lt;p&gt;I also took this opportunity to start looking into &lt;a href=&quot;http://qucsstudio.de&quot;&gt;QucsStudio&lt;/a&gt;, which is a free (not open source though) software for circuit simulation, with S-parameter simulation as well as Harmonic Balance simulation capabilities, which allows you to simulate RF circuits in high power regimes, and also some EM (Electromagnetic) simulation capabilities that have been introduced in the latest release. This is extremely useful if you’re designing a power amplifier, for instance, where you want to match your circuit to an input signal with high power, and also check the distortion effects arising from a transistors non-linear behavior. Working on the linear operation zone of a transistor is great, but you’ll not get good efficiencies if you don’t venture into non-linear territory. But that’s talk for another post, in this one, I’ll stick to linear behavior since we’re working with S-parameters only.&lt;/p&gt;
+
+&lt;p&gt;NOTE: Antennas are essentially linear devices, but it is not true all the time: A printed antenna will show non-linear behavior if the input signal is large enough. But that occurs essentially due to dielectric breakdown effects and therefore a very high power signal is required to get into that territory, and by very high, I mean hundreds of Watts power range.&lt;/p&gt;
+
+&lt;p&gt;Looking at the input impedance of the antenna, we have the following:&lt;/p&gt;
+
+&lt;p style=&quot;text-align: center;&quot;&gt;&lt;img src=&quot;/images/post10/antenna-tuning-sparams_base.png&quot; alt=&quot;antenna-base-specs&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;It’s clear that the matching is bad at both bands. Now, the trick to match this impedance, is to first match the lowest band, using only high pass configurations of lumped components, that is, series capacitors and shunt inductors. Series capacitors and shunt inductors are high pass filters, therefore, they’ll play a major role at the lower frequency, but have less influence in the highest band and vice-versa for shunt capacitors and series inductors.&lt;/p&gt;
+
+&lt;p&gt;By applying this principle, we can look at the impedance in the Smith chart and trace our course to the center. Following the principle stated previously, we have to navigate by a common admittance circle until we reach the unitary impedance circle by using a shunt inductor (follow the blue curve of the chart on the left) and then follow the common impedance circle with a series capacitor until we reach the center (follow the green curve on the left side chart).&lt;/p&gt;
+
+&lt;p style=&quot;text-align: center;&quot;&gt;&lt;img src=&quot;/images/post10/antenna-tuning-matching_options.png&quot; alt=&quot;antenna-tuning-options&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Now, one can wonder, why not simply use a single series inductor, and move directly to the center? We’d save one component and get the same effect. That is correct, if we’re matching only a single band. Using a single shunt capacitor would have a considerable effect on the highest frequency and make it much harder to match in a single shot.&lt;/p&gt;
+
+&lt;p&gt;To determine the correct component values you can either calculate them, use an online calculator, or do as I did which is to add one component at the time and do parameter sweeps to the component values. For instance, after adding a shunt inductor to the circuit, like in the picture below. Then by looking at the Smith chart result, we can see that the inductance value of 4.08 nH comes close to the point we want, so I chose 4.0 nH, which is a realistic component value and move on to the series capacitor.&lt;/p&gt;
+
+&lt;p style=&quot;text-align: center;&quot;&gt;&lt;img src=&quot;/images/post10/tunning_shuntL.png&quot; alt=&quot;tuning-shuntL&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;NOTE: The values on the Smith chart are S-parameter values, and not impedance values. In order to get the impedance values, use the math function rtoz(S[1,1], 50), which converts S-parameters to Z-parameters, where the second argument of the function the reference impedance of the system. Here’s a tip, create a table output and use the rtoz( ) function to see the impedance values you get when sweeping the component values.&lt;/p&gt;
+
+&lt;p style=&quot;text-align: center;&quot;&gt;&lt;img src=&quot;/images/post10/tunning_seriesC.png&quot; alt=&quot;tuning-seriesC&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Doing the same as before, but now sweeping the values of the series capacitor, we can reach the center of the Smith chart with a 0.7 pF capacitor. This leads to the following result:&lt;/p&gt;
+
+&lt;p style=&quot;text-align: center;&quot;&gt;&lt;img src=&quot;/images/post10/antenna_tunning_lowband.png&quot; alt=&quot;tuning-lowband&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;The 2.4 GHz band is done. As you can see, the 5 GHz moved as well, however, it’s movement was small and actually beneficial, since now we can match the 5 GHz band by simply adding a shunt capacitor. Conversely, if we’d use a series inductor, as mentioned above, the 5 GHz band would move to a value with large inductance which would require a series capacitor to match it. But the series capacitor would then move the lowest frequency band away from the tune we’ve reached. The figure below shows the comparison of the low band match between the CL circuit described thus far and the single series inductor.&lt;/p&gt;
+
+&lt;p style=&quot;text-align: center;&quot;&gt;&lt;img src=&quot;/images/post10/antenna_tunning_lowband_2.png&quot; alt=&quot;tuning-lowband_2&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;You can see what I described previously. At 2.4 GHz we get a good match, but at 5.5 GHz the impedance moves to a place where it’s difficult to match without affecting back the lowest band.&lt;/p&gt;
+
+&lt;p&gt;Going back to our circuit, as mentioned above, the thing left to do is to add a shunt capacitor to match the 5 GHz band. Following the same procedure as before, we get to a value of approximately 0.5 pF to match the 5 GHz band.&lt;/p&gt;
+
+&lt;p style=&quot;text-align: center;&quot;&gt;&lt;img src=&quot;/images/post10/tunning_shuntC.png&quot; alt=&quot;tuning-shuntC&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;This circuit, leads us to the following final results (in blue). Which is not bad, but can be improved. If we teak the latest shunt capacitor a bit off the center, by using a 0.3 pF capacitor instead of 0.5 pF, we may get a better match at the 2 GHz band (in red).&lt;/p&gt;
+
+&lt;p style=&quot;text-align: center;&quot;&gt;&lt;img src=&quot;/images/post10/antenna_tunning_highband.png&quot; alt=&quot;tuning-highband&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Now, this is all good and all, but the truth is, in a real PCB, you have tracks in between the components, and these are not ideal, they have parasitics due to the nature of their packages, as well as parasitics which are formed between them and the PCB tracks. All these effects are considerable at GHz frequencies and they’ll impact the matching. If one simulates the circuit behavior in such a manner, it will fail miserably in a real application. But I’ll leave a demonstration of such scenario for my next post (which I seriously hope won’t take so long).&lt;/p&gt;
+
+&lt;p&gt;That’s all for today.&lt;/p&gt;
+
+&lt;p&gt;Stay tuned (in whatever bands you want)!&lt;/p&gt;</content><author><name></name></author><summary type="html">Hello folks. There’s been some time since I’ve written my last post. I’ve been very busy with work and other side projects, which eventually will find their way here, but since they’re far from completion, I thought to make a smaller post about a subject that is useful and I’ve had had in my notes for a long time. So I figured I’d just put it up on the blog so it could be useful as reference for someone, or even myself one of these days.</summary></entry><entry><title type="html">Vertical Interconnect Accesses - Do you even RF? (Part II)</title><link href="http://localhost:4000/vertical-interconnect-accesses/" rel="alternate" type="text/html" title="Vertical Interconnect Accesses - Do you even RF? (Part II)" /><published>2020-11-01T00:00:00+00:00</published><updated>2020-11-01T00:00:00+00:00</updated><id>http://localhost:4000/vertical-interconnect-accesses</id><content type="html" xml:base="http://localhost:4000/vertical-interconnect-accesses/">&lt;p&gt;A while ago I promised to look into the effects of using VIAs (Vertical Interconnect Access) on RF tracks to change layers on PCBs. Unlike the 90º degree bends on PCB tracks, in this case there’s essentially two postures about the matter. Either people are completely clueless of the potential risk of placing a via on a RF track and do it recklessly. Or they’re somehow a little aware of the risks, therefore completely demonize such practice, going at extreme lengths such as increasing the track sizes immensely (making it even worst), just so to avoid the use of the via.&lt;/p&gt;
+
+&lt;p&gt;A long time ago I found an awesome primer about vias for high-speed and RF tracks from Keysight, you can find it &lt;a href=&quot;https://youtu.be/FVKOC8xz1F0&quot;&gt;here&lt;/a&gt;. However, it focuses mainly on multi-layer board in excess of 8 layers. Therefore, although the concepts are the same and the material is absolutely valuable no matter your scenario, it lacks the actual results you’d get in a 2 or 4 layer board.&lt;/p&gt;
+
+&lt;p&gt;I’ve been cooking this post for a while, but due to several reasons (laziness), it has taken me much longer than usual to finish it up. And then, in the latest weeks there’s been releases on Youtube, of videos concerning this very specific topic, about ground vias and current return paths. So, instead of going through a lengthy post and a lot of explanations, I’m just going to leave here two links for two videos from Mr. Robert Feranec’s youtube channel explaining why this stuff matters and showing some neat simulations on the phenomena.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://youtu.be/nPx2iqmVAHY&quot;&gt;Video 1 - Ground vias&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://youtu.be/icRzEZF3eZo&quot;&gt;Video 2 - Current return paths&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Now, this stuff is no secret, you can read the &lt;a href=&quot;https://books.google.pt/books?id=H5SsQgAACAAJ&amp;amp;hl=pt-PT&amp;amp;source=gbs_book_other_versions&quot;&gt;High-Speed Digital Design: A Handbook of Black Magic&lt;/a&gt; by Howard W. Johnson and Martin Graham and you’d learn most of this stuff. The issue is, most electronics engineers don’t actually read this book unless they work with Signal Integrity topics, but believe me if I say everyone can benefit from getting to know about it. And not only those poor EMC engineers, that have to dwell into the deepness of electronic hell, to fight the evil forces of the electromagnetic and restore the balance to the force(s)… quite literally.&lt;/p&gt;
+
+&lt;p style=&quot;text-align: center;&quot;&gt;&lt;img src=&quot;/images/post9/gandalf.gif&quot; alt=&quot;Gandalf&quot; /&gt;&lt;/p&gt;
+&lt;p style=&quot;text-align: center;&quot;&gt;(me, fightning the nasty harmonics. Or the way I picture it in my head…)&lt;/p&gt;
+
+&lt;p&gt;Well, that would be a pretty lame post if I’d just leave it at that. So I’m going to try to show the limits of the application of vias on RF tracks, especially in 2- and 4-layer FR-4 PCBs, which are used most frequently, especially (but not exclusively) in the hobbyist world.&lt;/p&gt;
+
+&lt;p&gt;Let’s start with the 2-layer PCB. Now you could be legitimately asking why would someone need to know this, who’d be the fool to design RF circuits on 2-layer FR-4 PCBs…&lt;/p&gt;
+
+&lt;p style=&quot;text-align: center;&quot;&gt;&lt;img src=&quot;/images/post9/fool.gif&quot; alt=&quot;fool&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;That is legit, but you’d be surprised how much this is common ground nowadays, surf a little bit about, on such as the &lt;a href=&quot;https://hackaday.io&quot;&gt;Hackaday&lt;/a&gt;, to see the amount of projects with wireless communications on it using 2-layer PCBs.
+The simulation structure is microstrip line, tuned for 50  Ω , split in the middle with a via from top to bottom layer. The main issue with this practice, in this particular scenario, is that the reference ground for the track on the top is on the bottom layer, but when you shift the signal to the bottom layer, the ground reference for the new track is now on the top layer. The inductance increase by the increased return path is such that obliterates the impedance response of the track, becomes a radiation source and simply messes the signal for any RF frequency. Again, if you’re working at 10 MHz you probably don’t need to worry about this, but if you’re using a Bluetooth module at 2.45 GHz, you better pay attention!&lt;/p&gt;
+
+&lt;p&gt;Here’s the simulation models for 2-layers and 4-layers examples:&lt;/p&gt;
+&lt;p style=&quot;text-align: center;&quot;&gt;&lt;img src=&quot;/images/post9/microstrip_line_1.png&quot; alt=&quot;2layers&quot; /&gt;&lt;br /&gt;
+&lt;img src=&quot;/images/post9/microstrip_line_2.png&quot; alt=&quot;4layers&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;For the 2-layer example I’ve modeled the dielectric as FR-4, while for the 4-layer board I’ve based the PCB on the &lt;a href=&quot;https://docs.oshpark.com/services/four-layer/&quot;&gt;OSH Park 4-layer stackup&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;In scenario I, there’s no vias connecting the plane, but since the boundaries of the simulation model, at widths edge, are modeled as perfect electrical conductors, both planes will touch this and will have the same potential. On scenario II, I added some vias close to the transition via. I also simulated with boards of 1.6 and 0.8 mm thicknesses to see the possible improvement a smaller via could provide, making up scenario III and IV. This leads to the following results:&lt;/p&gt;
+
+&lt;p style=&quot;text-align: center;&quot;&gt;&lt;img src=&quot;/images/post9/2-layer_08mm.png&quot; alt=&quot;2layers08&quot; /&gt;
+&lt;img src=&quot;/images/post9/2-layer_16mm.png&quot; alt=&quot;2layers16&quot; /&gt;
+&lt;img src=&quot;/images/post9/4-layer.png&quot; alt=&quot;4layersOSH&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;If we break down these results, one thing is clear, don’t even try to change layers of an RF track if you’re designing on a 2 layer FR-4 PCB of 1.6 mm of thickness, no return vias will save your ass. I mean, the vias certainly improve a little bit, allow you to go a little beyond 2 GHz, but the performance is just trash anyway. Now, if you’re smarter, you’d use a 0.8 mm board, well then the proper use of return vias will allow you to go up to 5 GHz without much trouble. But, fail to provide a decent return path and you’ll be facing problems already at 2.5 GHz.
+Now if you look at the results for the 4-layer PCB, it gives you two things: 1) OSH Park 4-layer PCB stackup, with their permittivity controlled ISOLA substrate, is wicked good for RF designs; 2) the return vias have a considerable effect in this scenario. As you can see from the results above, if you have a correct return path you can do transitions on the RF tracks with vias and go way beyond 10 GHz without breaking a sweat.&lt;/p&gt;
+
+&lt;p style=&quot;text-align: center;&quot;&gt;&lt;img src=&quot;/images/post9/sweat.gif&quot; alt=&quot;sweat&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;But, if you fail to provide said decent return path, you may get away with a passable, but not good performance.
+Remember that these simulation models are quite small, they’re just a section of the PCB with the track within and even in the no via case the return path is a short distance away since the edges of the PCB are shorted at the boundary and have the exact same potential all along the sides. In a real application this is not the case! Both planes will retain the same potential as long as there’s vias connecting them both, besides, the tracks will probably be longer. Hence, take this results as optimistic bacause in a real PCB it’s gonna be worst!&lt;/p&gt;
+
+&lt;p&gt;One thing I haven’t explored in depth in here, is the radiation effects. But if you check those videos from Mr. Feranec he explains the effects of slots on the return path and what are the outcomes of such foul practices.&lt;/p&gt;
+
+&lt;p&gt;That’s all for today folks, I hope my next post will not take as long to come out.&lt;/p&gt;
+
+&lt;p&gt;Stay tuned!&lt;/p&gt;</content><author><name></name></author><summary type="html">A while ago I promised to look into the effects of using VIAs (Vertical Interconnect Access) on RF tracks to change layers on PCBs. Unlike the 90º degree bends on PCB tracks, in this case there’s essentially two postures about the matter. Either people are completely clueless of the potential risk of placing a via on a RF track and do it recklessly. Or they’re somehow a little aware of the risks, therefore completely demonize such practice, going at extreme lengths such as increasing the track sizes immensely (making it even worst), just so to avoid the use of the via.</summary></entry><entry><title type="html">UHF RFID Antennas - VII - Quadrifilar antenna (Part II)</title><link href="http://localhost:4000/uhf-rfid-antennas7/" rel="alternate" type="text/html" title="UHF RFID Antennas - VII - Quadrifilar antenna (Part II)" /><published>2020-09-12T00:00:00+01:00</published><updated>2020-09-12T00:00:00+01:00</updated><id>http://localhost:4000/uhf-rfid-antennas7</id><content type="html" xml:base="http://localhost:4000/uhf-rfid-antennas7/">&lt;p&gt;To continue on the topic of the printed quadrifilar antennas, as promised, this post will be about the feeding network. Last post I’ve shown the antenna part and a quick explanation as to what the feeding network should look like, this time I’m going to cover the power distribution network that makes it all work. More specifically, I’ll explore an alternative that allows the antenna construction to be more compact and with better performance.&lt;/p&gt;
+
+&lt;p&gt;So the idea is to create a system which has one single input port and four output ports, where all the outputs have the same power and 90º sequential phase difference between them, as explained in the last post.&lt;/p&gt;
+
+&lt;p style=&quot;text-align: center;&quot;&gt;&lt;img src=&quot;/images/post8/pdn.png&quot; alt=&quot;pdn&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;But how exactly does that work and why the antenna becomes circularly polarized, when the single element of the antenna has linear polarization? Well, if you generate two orthogonal electric field components with a 90º phase difference between them, then the resulting field in the direction of radiation varies circularly. To the left or to the right depending on which component comes first. Here’s two poor animations I’ve put together in Python to illustrate the effect (I made an effort alright?):&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th style=&quot;text-align: center&quot;&gt;&lt;img src=&quot;/images/post8/linear_pol_corr.gif&quot; alt=&quot;efield-linear&quot; /&gt;&lt;/th&gt;
+      &lt;th style=&quot;text-align: center&quot;&gt;&lt;img src=&quot;/images/post8/circular_pol_corr.gif&quot; alt=&quot;efield-circular&quot; /&gt;&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;Electric field components with 0º phase&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;Electric field components with 90º phase&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;So, since we have elements generating linear polarization but one orthogonal to the other, if they’re fed in phase, they’ll generate a linear, but slant polarization, like the animation on the left. But, if they’re fed with a 90º phase difference we get a circular polarization, like the one shown on the right.&lt;/p&gt;
+
+&lt;p&gt;If you’d like to see something with better looks and a more detailed explanation, then look no further and check out &lt;a href=&quot;https://youtu.be/8YkfEft4p-w&quot;&gt;this video&lt;/a&gt; about polarization of electromagnetic waves.&lt;/p&gt;
+
+&lt;p&gt;And now you’re wondering, “Wait, but if you only need to excite two fields with 90º phase between them, then why do you have an antenna with 4 elements, what are the other two elements for?”&lt;/p&gt;
+
+&lt;p style=&quot;text-align: center;&quot;&gt;&lt;img src=&quot;/images/post8/playing_alignment.gif&quot; alt=&quot;chaotic&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Now seriously, the other two elements are there to balance the main-lobe direction. You see, the only way to make it with only two elements, is if the two elements are physically co-located, so that their phase centers are in the same spot. SPOILER ALERT: This is possible, but that’s another pots.
+Since in the example of the quadrifilar antenna each element is apart from another, their phase-centers are separated, this will cause the radiation pattern to tilt towards the opposite side of the fed elements.&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th style=&quot;text-align: center&quot;&gt;&lt;img src=&quot;/images/post8/two_ports_90.png&quot; alt=&quot;two-elements&quot; /&gt;&lt;/th&gt;
+      &lt;th style=&quot;text-align: center&quot;&gt;&lt;img src=&quot;/images/post8/four_ports_90.png&quot; alt=&quot;efield-circular&quot; /&gt;&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;Only two elements fed&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;All four elements fed.&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;The continuous phase progression is easy to understand given that the other elements are in opposition of phase. The element in the bottom is generating an electric field with the exact same polarization component, but in opposition of phase, the same happens to the element of the left side in relation to the element on the right. If these were to be fed in phase, the field components would cancel between them, and you end up with…&lt;/p&gt;
+
+&lt;p style=&quot;text-align: center;&quot;&gt;&lt;img src=&quot;/images/post8/pieces_of.gif&quot; alt=&quot;ramsey&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;With that out of the way, let’s get back to the point of this post, which is about the feeding network as shown in the first figure. Now, as my grandma used to say, “there’s many ways to tie a tie”, so there’s many ways to produce said feeding network. The most obvious and straightforward method is as I’ve shown in my previous post:&lt;/p&gt;
+
+&lt;p style=&quot;text-align: center;&quot;&gt;&lt;img src=&quot;/images/post8/wilkinson_nw.jpg&quot; alt=&quot;wilkinson&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;It’s a Wilkinson power divider, followed by delay lines. The main issue with this implementation, is that a microstrip line with quarter-wavelength length (90 degrees of electrical length) in FR-4 substrate at 900 MHz, is 46.1 mm long, and for that implementation you have one branch with 180º, that’s 92.2 mm and the other with 270º, that’s a whooping 138.3 mm length. Of course you can make curves and meander it around, but that’s still a lot of track to cover. And when you think that these lines have a huge loss given FR-4 being a very poor substrate material for RF tracks, you really start to look for better alternatives.&lt;/p&gt;
+
+&lt;p&gt;One alternative is as shown in &lt;a href=&quot;https://ieeexplore.ieee.org/document/7042302&quot;&gt;Qiang Liu’s paper&lt;/a&gt;, which is actually a combination of two structures, first an out-of-phase (180º) power splitter, described in &lt;a href=&quot;https://digital-library.theiet.org/content/journals/10.1049/el_20061767&quot;&gt;J. X. Chen’s paper&lt;/a&gt;, plus two miniaturized arbitrary phase difference couplers, as described in &lt;a href=&quot;https://ieeexplore.ieee.org/document/6515706&quot;&gt;Yongle Wu’s paper&lt;/a&gt;. As in the following picture:&lt;/p&gt;
+
+&lt;p style=&quot;text-align: center;&quot;&gt;&lt;img src=&quot;/images/post8/qiangliu_nw.jpg&quot; alt=&quot;qiangliu&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;NOTE: I could have done this schemes in a computer, but I’m lazy-artistic and I enjoyed doing them on hand.&lt;/p&gt;
+
+&lt;p&gt;The middle section represents the out-of-phase power splitter and the top and bottom sections are the arbitrary phase difference couplers, in this case, tuned for 90º phase difference between ports.&lt;/p&gt;
+
+&lt;p&gt;Let’s break it down…&lt;/p&gt;
+
+&lt;p style=&quot;text-align: center;&quot;&gt;&lt;img src=&quot;/images/post8/breakitdown.gif&quot; alt=&quot;breakitdown&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;The out-of-phase power splitter is actually a pretty simple and clever structure. It’s made with two microstrip lines on top of each other, with a common ground plane in the middle, and the signal is fed into one of the lines with respect to the other, so they’re naturally out-of-phase (180º). In order to accomplish the 50  Ω  impedance at the output ports, an impedance transition of 25 to 50  Ω  is necessary, which is achieved with a quarter-wavelength section of line with  $Z_1=Z_0/2–\sqrt(2)=35.35$Ω . Here’s an illustration of that section (ground plane is hidden so bottom layer is visible).&lt;/p&gt;
+
+&lt;p style=&quot;text-align: center;&quot;&gt;&lt;img src=&quot;/images/post8/splitter.png&quot; alt=&quot;splitter&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;The coupler is a little more complex, nevertheless, the principle for design is not complicated. There’s essentially two different sections, one at the middle with the highest impedances, and the left and right sections, being equal, with lower impedances. They’re composed of coupled microstrip line sections, with a given length and even/odd impedance characteristic, determined based on the intended phase delay between each of the ports. These impedances can be calculated from the following expressions:&lt;/p&gt;
+
+\[Z_{e1}=2k\sqrt{1−C^2}\sin\phi/[(k+1)C]\]
+
+\[Z_{e2}=\sqrt{Z_{e1}^2/(1+Z_{e1}Z_{o1})}\]
+
+\[Z_{o1}=Z_{e1}/k\]
+
+\[Z_{o2}=Z_{e2}/k\]
+
+&lt;p&gt;where  $C$  is the coupling coefficient, 3-dB in this case, and $\phi$ is the phase difference between ports, 90º in this case. The $k$ factor is a value between 1 and 2, that balances the bandwidth of operation of the coupler, with its potential size and design constraints. In Qiang Liu’s paper they’ve set $k$ to 1.2, which is a good compromise between size, bandwidth and the feasible separation between tracks for fabrication, wielding the following parameter values for the couplers lines, $Z_{e1}=54.5 \Omega$, $Z_{o1}=45.5 \Omega$, $Z_{e2}=38.5\Omega$ and $Z_{o2}=32.0 \Omega$.&lt;/p&gt;
+
+&lt;p&gt;So now you just need to design said couplers and you’re rightfully asking, “how to design such coupled lines with those even and odd mode impedances?”. Well, there are some closed form equations to determine the physical parameters of the lines based on the impedance parameters, and the easiest and fastest way is to use an online calculator, &lt;a href=&quot;http://wcalc.sourceforge.net/cgi-bin/coupled_microstrip.cgi&quot;&gt;like this one&lt;/a&gt;, instead doing all those calculations by hand.Here’s an example of one of the sections with $Z_{e1}$ and $Z_{o1}$ impedances:&lt;/p&gt;
+
+&lt;p style=&quot;text-align: center;&quot;&gt;&lt;img src=&quot;/images/post8/coupled_lines_calc.png&quot; alt=&quot;lines_calc&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;As you can see, with those values for even/odd impedance, the width and separation spaces for the coupled microstrip lines are very close to the dimensions used by Qiang Liu in his paper. Still, this is just to obtain an approximate result, these are then further optimized in simulation, and given the wide bandwidth of operation, working with just slide deviations is ok.&lt;/p&gt;
+
+&lt;p&gt;All of this put together results in the following:&lt;/p&gt;
+
+&lt;p style=&quot;text-align: center;&quot;&gt;&lt;img src=&quot;/images/post8/couplers.png&quot; alt=&quot;couplers&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;The ground plane is transparent in this picture so all the layers are visible. Nevertheless, between the top and bottom PCB’s, there’s a common ground for both microstrip lines, it’s border can be seen in the bottom section of the picture, at the input section, there’s no ground in between the two feed pads.
+Then, when combined with the four PIFA antennas from before, placed at a distance from  11.2 mm from the ground plane of the couplers board, result in the following structure, wielding the results shown:&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th style=&quot;text-align: center&quot;&gt;&lt;img src=&quot;/images/post8/quadrifilar_complete.png&quot; alt=&quot;complete&quot; /&gt;&lt;/th&gt;
+      &lt;th style=&quot;text-align: center&quot;&gt;&lt;img src=&quot;/images/post8/radiation_3d.png&quot; alt=&quot;radiation&quot; /&gt;&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;Complete quadrifilar structure perspective view&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;Radiation pattern (Gain) at 900 MHz&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;&lt;img src=&quot;/images/post8/sparameters.png&quot; alt=&quot;sparameters&quot; /&gt;&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;&lt;img src=&quot;/images/post8/radiation-ar-wfreq.png&quot; alt=&quot;gain_ar&quot; /&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;Reflection coefficient&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;Gain and axial-ratio with frequency&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;The impedance bandwidth as well as the circular polarization bandwidth are quite wide. But the trade-off is the gain, especially when implementing such a distribution network on a very lossy substrate, reducing the radiation efficiency to values in the order of 70%, the maximum RHCP gain is 3.0 dBic.&lt;/p&gt;
+
+&lt;p&gt;I wanted to show another method to have a sequential phase difference 4-port distribution network, but this post is getting rather long, so I’m going to leave that to a further opportunity. As usual, I’ll upload the design files for this antenna on my GitHub.&lt;/p&gt;
+
+&lt;p&gt;Stay tuned!&lt;/p&gt;</content><author><name></name></author><summary type="html">To continue on the topic of the printed quadrifilar antennas, as promised, this post will be about the feeding network. Last post I’ve shown the antenna part and a quick explanation as to what the feeding network should look like, this time I’m going to cover the power distribution network that makes it all work. More specifically, I’ll explore an alternative that allows the antenna construction to be more compact and with better performance.</summary></entry><entry><title type="html">UHF RFID Antennas - VI - Quadrifilar antenna (Part I)</title><link href="http://localhost:4000/uhf-rfid-antennas6/" rel="alternate" type="text/html" title="UHF RFID Antennas - VI - Quadrifilar antenna (Part I)" /><published>2020-08-22T00:00:00+01:00</published><updated>2020-08-22T00:00:00+01:00</updated><id>http://localhost:4000/uhf-rfid-antennas6</id><content type="html" xml:base="http://localhost:4000/uhf-rfid-antennas6/">&lt;p&gt;Hey there folks! 
+Today I’m heading back to the RFID reader antennas topic. This time, I’m covering another typical antenna found in these readers, which is the quadrifilar antenna. In this particular case, a printed implementation of the quadrifilar antenna.&lt;/p&gt;
+
+&lt;p style=&quot;text-align: center;&quot;&gt;&lt;img src=&quot;/images/post7/hello.gif&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;These antennas are composed of four arms, either monopoles or PIFA type elements, where each of the elements is fed with a 90º phase delay in between in order to create a circularly polarized radiation. Another common place for quadrifilar antennas is the helix type antennas used for VHF and UHF band communications and GNSS applications. These are very popular among HAMs and also some commercial applications. Here’s some examples:&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th style=&quot;text-align: center&quot;&gt;&lt;img src=&quot;/images/post7/quadrifilar_helix.png&quot; alt=&quot;helix&quot; /&gt;&lt;/th&gt;
+      &lt;th style=&quot;text-align: center&quot;&gt;&lt;img src=&quot;/images/post7/quadrifilar-2.png&quot; alt=&quot;pifa&quot; /&gt;&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;Quadrifilar helix antenna&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;Quadrifilar PIF-Antenna&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;The main feature of this implementation (Quadrifilar PIFA) is the polarization purity, wide bandwidth (due to impedance stability with frequency of the elements of the antennas, when placed above a ground plane), associated with a rather compact package. Yes, there are smaller antennas, but you trade performance for size and the quadrifilar usually gives a good compromise.&lt;/p&gt;
+
+&lt;p&gt;To build the quadrifilar PIFA there’s essentially two major sections that are desgined separately and then combined in the end: The antenna element (the PIFA); and the feeding network. The former being the easiest and essentially based on regular PIFAs with some meandering of the arms in order to reduce the size, while the later is usually the more complex subject, and fitting the complete network within a limited space poses the hardest challenge.&lt;/p&gt;
+
+&lt;p&gt;For this post, I based essentially on two papers, &lt;a href=&quot;https://ieeexplore.ieee.org/document/7042302&quot;&gt;this one&lt;/a&gt; from Qiang Liu and &lt;a href=&quot;https://www.researchgate.net/publication/311435096_Compact_UHF_RFID_handheld_reader_antenna_and_array_based_on_resonant_quadrifilar_spiral_structure&quot;&gt;this one&lt;/a&gt; from Xuefeng Zhao. There’s quite a few references available if you search online. I went through a few (and by a few I mean like three or four, I’m kinda lazy), these two were more fundamental and I liked these two the best.&lt;/p&gt;
+
+&lt;p&gt;In this post I’ll go through the process of designing such an antenna and focus essentially on the antenna structure and radiation results. On the next post I’ll focus on some alternatives for the feeding network to make it more compact. I took the antenna structure from the &lt;a href=&quot;https://ieeexplore.ieee.org/document/7042302&quot;&gt;Qiang Liu’s&lt;/a&gt; paper but mashed it with the feeding network from the &lt;a href=&quot;https://www.researchgate.net/publication/311435096_Compact_UHF_RFID_handheld_reader_antenna_and_array_based_on_resonant_quadrifilar_spiral_structure&quot;&gt;Xuefeng Zhao’s&lt;/a&gt; paper. It’s the simplest antenna form with the simplest feeding network. On the next post I’ll explore the feeding network shown in Qiang Liu’s paper, which is more elaborate, and also another alternative to have a compact solution. As for the Xuefeng Zhao antena configuration, it is essentially the same IFA antenna approach, but reduces the overall size by bending the monopole arms and by placing the shorting stub of the IFA in the vertical connection between the boards (similar to the antenna on the picture above from the QUBE antenna). So, if I mashed up the other way around, I’d achieve the most compact solution, which I hope I can shown on my following post.&lt;/p&gt;
+
+&lt;p&gt;I’ll start with designing the IFA: IFAs are pretty old antennas, no busy covering the particularities of it. But if you’re interested, you can check &lt;a href=&quot;https://www.antenna-theory.com/antennas/patches/pifa.php&quot;&gt;this page&lt;/a&gt;, has a lot of useful resources. It’s easy, you just design an arm on a PCB, place it at some distance from a ground plane (on the picture below, the antenna arm is in the top PCB while the ground is in the bottom PCB), feed it at a given distance from one of the arms edges and place a short circuit pin at that end. Like this:&lt;/p&gt;
+
+&lt;p style=&quot;text-align: center;&quot;&gt;&lt;img src=&quot;/images/post7/quadrifilar_prespective.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;NOTE: gray zones are dielectric (FR4), yellow zones are copper.&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th style=&quot;text-align: center&quot;&gt;&lt;img src=&quot;/images/post7/radiation_3d.png&quot; alt=&quot;rad_abs&quot; /&gt;&lt;/th&gt;
+      &lt;th style=&quot;text-align: center&quot;&gt;&lt;img src=&quot;/images/post7/radiation_ar_quadrifilar.png&quot; alt=&quot;rad_ar&quot; /&gt;&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;Radiation pattern (Directivity) at 900 MHz&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;Radiation pattern (Axial Ratio) at 900 MHz&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;&lt;img src=&quot;/images/post7/radiation_polarization.png&quot; alt=&quot;rad_pol&quot; /&gt;&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;&lt;img src=&quot;/images/post7/radiation_w_freq.png&quot; alt=&quot;rad_wfreq&quot; /&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;Radiation pattern (Theta/Phi relation) at 900 MHz&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;Directivity, Gain and Efficiency with frequency&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;As you can see from this results, the main direction of radiation is essentially towards the upper hemisphere, and is quite broad in the YZ axis, which is also referred as the H-plane. This is expected since the antenna would otherwise be omnidirectional in the H-plane, but the ground plane in the bottom makes the radiation reflect towards the upper direction.&lt;/p&gt;
+
+&lt;p&gt;The polarization is also linear, since the AR (axial ratio) in the principal radiation direction is 40 dB, and is inline with the direction of the arm, as can be seen from the Theta/Phi relation plot. The gain is also increasing with frequency, which is also expected since the antenna is electrically larger and larger as the frequency increases. So everything looks good, we can move on.&lt;/p&gt;
+
+&lt;p&gt;You might be wondering why I’m not showing any S-parameters. Well, because, at this point I don’t care. I’ll have to multiply this antenna by four and design a matching network to feed all the elements simultaneously. The combined effect of the four loads, plus the matching network, being composed of multiple power-splitters, will make the operation bandwidth of the antenna rather large, regardless of the impedance response of each of the elements standalone.&lt;/p&gt;
+
+&lt;p&gt;Ok, so we have our base antenna, now we just replicate three times the same design, rotate each element by 90º in relation to the previous and give some slight separation between the elements, so that the distance between each of the arms and the center of the antennas is roughly a quarter of the wavelength, ending up with the antenna as proposed in Qiang Liu’s paper, like so:&lt;/p&gt;
+
+&lt;p style=&quot;text-align: center;&quot;&gt;&lt;img src=&quot;/images/post7/quadrifilar_complete_prespective.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Now, in order to obtain a circular polarization radiation, you just feed each of the elements, with the same power amplitude and a 90º phase difference between them. To avoid designing the feeding network to have to check for the array, in CST you can just add a port to each element and then setup the simultaneous excitation in the ‘Excitation settings’ menu, within the ‘Simulation setup’ panel.&lt;/p&gt;
+
+&lt;p&gt;With this setting the radiation results for the 4-element array antenna are the following:&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th style=&quot;text-align: center&quot;&gt;&lt;img src=&quot;/images/post7/radiation_abs.png&quot; alt=&quot;rad_abs&quot; /&gt;&lt;/th&gt;
+      &lt;th style=&quot;text-align: center&quot;&gt;&lt;img src=&quot;/images/post7/radiation_ar.png&quot; alt=&quot;rad_ar&quot; /&gt;&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;Radiation pattern (Directivity) at 900 MHz&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;Radiation pattern (Axial Ratio) at 900 MHz&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;&lt;img src=&quot;/images/post7/radiation_lhcp.png&quot; alt=&quot;rad_pol&quot; /&gt;&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;&lt;img src=&quot;/images/post7/radiation_rhcp.png&quot; alt=&quot;rad_wfreq&quot; /&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;Radiation pattern (LHCP) at 900 MHz&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;Radiation pattern (RHCP) at 900 MHz&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;As you can see from the results above, the overall directivity of the antenna increased. Which is normal since we have four antennas contributing to radiation. The axial ratio shows that polarization is nearly perfectly circular (this is an ideal simulation since we excited all the ports with perfect 90º shifts, won’t happen in final models I’ll show next post), and also that the rotation set between the ports is correct, the obtained rotations is clockwise (RHCP) as seen from the LHCP and RHCP responses in two bottom pictures.&lt;/p&gt;
+
+&lt;p&gt;For the matching network I picked up the design from the Xuefeng Zhao’s paper, which is a Wilkinson power divider, with one output delayed by 90º, then followed by delay lines of 180º in each branch, as in the following construction:&lt;/p&gt;
+
+&lt;p style=&quot;text-align: center;&quot;&gt;&lt;img src=&quot;/images/post7/feeding_nw.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Combining this matching network with the antenna results we can finally have a glimpse at the expected impedance operating frequency, given by the S parameters at the single port input at the entrance of the Wilkinson power divider. Here it is:&lt;/p&gt;
+
+&lt;p style=&quot;text-align: center;&quot;&gt;&lt;img src=&quot;/images/post7/spara.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;To actually find the whole covered band, we have to look from 500 to 1300 MHz, to discover the impedance bandwidth of this antenna is between 700 and 1100 MHz. Plus, the radiation results for the combination of the matching network with the antenna elements are also very good. The axial ratio is below 3 dB (circularly polarized) through 820 to 980 MHz (more than necessary) as well as the efficiencies ranging above 95% for the whole spectrum. Here’s the plot:&lt;/p&gt;
+
+&lt;p style=&quot;text-align: center;&quot;&gt;&lt;img src=&quot;/images/post7/radiation_w_freq_quad.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;However, the truth is that these results are based on a simulation of ideal transmission lines with a perfect transition to the feeding points of the antenna. This efficiency results are only from the antenna radiation and don’t take into account the loss effect of the feeding network. For that, the feeding network 3D EM model should be simulated and integrated with the antenna. Nevertheless, these results give a pretty good indication that we’re in the right track, and prove all the advantage points I referred at the beginning of this post. The two downsides of this antenna topology versus the air core microstrip patch I’ve shown in previous posts, are the lower gain and the more complex implementation.&lt;/p&gt;
+
+&lt;p&gt;The smaller gain is a direct consequence of the reduced size of the antenna. We’re trading size for gain, that’s an essential rule in antenna design, you always sacrifice on gain to achieve smaller package antennas, with some exceptions for more complex techniques with metamaterials and such…&lt;/p&gt;
+
+&lt;p style=&quot;text-align: center;&quot;&gt;&lt;img src=&quot;/images/post7/going.gif&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;…but that’s a story for another time!&lt;/p&gt;
+
+&lt;p&gt;Next post I’ll continue this quadrifilar antenna exploration, but I’ll focus on the feeding networks, exploring two possibilities to make the feeding network smaller. You see, the antenna in this post with the straight monopoles has a package of 90 x 90 mm, an improvement from the patch, but not incredible. The goal is to get to a package of 60 x 60 mm as the QUBE antenna shown in the biggining (or even maybe 50 x 50 mm).&lt;/p&gt;
+
+&lt;p&gt;Till then, stay tuned!&lt;/p&gt;</content><author><name></name></author><summary type="html">Hey there folks! Today I’m heading back to the RFID reader antennas topic. This time, I’m covering another typical antenna found in these readers, which is the quadrifilar antenna. In this particular case, a printed implementation of the quadrifilar antenna.</summary></entry><entry><title type="html">90 Degree angle traces - Do you even RF?</title><link href="http://localhost:4000/90-degree-angles/" rel="alternate" type="text/html" title="90 Degree angle traces - Do you even RF?" /><published>2020-07-24T00:00:00+01:00</published><updated>2020-07-24T00:00:00+01:00</updated><id>http://localhost:4000/90-degree-angles</id><content type="html" xml:base="http://localhost:4000/90-degree-angles/">&lt;p&gt;Hey there folks. Today I’m going to talk about curves in PCB tracks. I’ve seen a few topics here and there trying to demystify the way that tracks should curve in order to avoid all sorts of magic stuff. There seems to be a large consensus about avoiding 90º degrees bend at all costs, then there’s a lot of people already claiming we’ve been doing stuff based on tradition only and that there’s no solid reason nor practical argument to not use 90º bent tracks. So I thought I should give my two cents on this subject. If you want to indulge in such a discussion, check out &lt;a href=&quot;https://electronics.stackexchange.com/questions/226582/pcb-90-degree-angles&quot;&gt;this EDA stack overflow thread&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;The most voted answer of said thread is certainly very detailed and mostly demystifies religious beliefs about the 90 degree angles in the tracks. But I also feel it ends up going overboard with statements such as:&lt;/p&gt;
+
+&lt;p style=&quot;text-align: center;&quot;&gt;“In fact, this is true even at very high frequencies, which I will address further down in this post. If I am wrong, by all means, show me measurements demonstrating that 90 degree corners are worse. Or better yet, if there is a measurable difference, surely it would be straight forward to build a meter that could determine if a trace had a right angle or 45 degree angle corner in it entirely by performing measurements on the input and output. Or picking up the EMI. I will eat my words if anyone can build a meter to do that.”&lt;/p&gt;
+
+&lt;p&gt;That’s where it messed up. You don’t just go out and start talking about high frequency if you know jack about that business. Unless you consider 10 MHz to be high frequency…&lt;/p&gt;
+
+&lt;p style=&quot;text-align: center;&quot;&gt;&lt;img src=&quot;/images/post6/grinning.gif&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;I’ll not indulge in philosophical discussions, nor unearth ancient documents with references to processes that are no longer in use since your grandma wear bikinis (you can check that thread I mentioned before for that). I’m gonna be more pragmatic… I’ll use a damn expensive EM simulation tool and compare some PCB tracks!&lt;/p&gt;
+
+&lt;p&gt;I’ll start simple. I picked a 100 mm long microstrip line, with 50  Ω  characteristic impedance, calculated for a FR-4 substrate with 60 mil (1.6 mm) thickness, and designed a 180º path using four different curve types. Let’s see how it bends!&lt;/p&gt;
+
+&lt;p style=&quot;text-align: center;&quot;&gt;&lt;img src=&quot;/images/post6/bender.gif&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Ok so here are the example lines I’ll be comparing. They are, in order, a 90 degree bended line (I), an optimum chamfered 90 degree line (II), a 45 degree curved line (III) and a rounded corner line (IV). They all have exactly 100 mm of length and simulated from 0.1 to 20 GHz.&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th style=&quot;text-align: center&quot;&gt;&lt;img src=&quot;/images/post6/ninetydeg.png&quot; alt=&quot;&quot; /&gt;&lt;/th&gt;
+      &lt;th style=&quot;text-align: center&quot;&gt;&lt;img src=&quot;/images/post6/opt.png&quot; alt=&quot;&quot; /&gt;&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;90 degree bend (I)&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;Mitered 90 degree bend (II)&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;&lt;img src=&quot;/images/post6/fortyfive.png&quot; alt=&quot;&quot; /&gt;&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;&lt;img src=&quot;/images/post6/round.png&quot; alt=&quot;&quot; /&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;45 degree curves (III)&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;Rounded corners (IV)&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;Below there’s the S-parameter results for each of these lines. Remember, S(1,1) and S(2,2) we want below -10 dB, while S(2,1) and S(1,2) (which in this case are perfectly reciprocal) we want as close to 0 dB as possible. In the pictures below, the red line is the S(1,1) and the green line is the S(2,1).&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th style=&quot;text-align: center&quot;&gt;&lt;img src=&quot;/images/post6/sparam_90deg_bend.png&quot; alt=&quot;&quot; /&gt;&lt;/th&gt;
+      &lt;th style=&quot;text-align: center&quot;&gt;&lt;img src=&quot;/images/post6/sparam_opt_bend.png&quot; alt=&quot;&quot; /&gt;&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;90 degree bend (I)&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;Mitered 90 degree bend (II)&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;&lt;img src=&quot;/images/post6/sparam_45deg_bend.png&quot; alt=&quot;&quot; /&gt;&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;&lt;img src=&quot;/images/post6/sparam_round.png&quot; alt=&quot;&quot; /&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;45 degree curves (III)&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;Rounded corners (IV)&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;Looking solely at the impedance perspective, if you’re working below 5 GHz, by all means, do 90 degree bends (well actually, try to read further to see the rest of the analysis)! But, if you’re working, say, at 5.8 GHz for 802.11ac or something similar, then you may want to chop the edges on those 90 degree corners, see example (II). But beyond that point, you most certainly should look for 45 degree curves or rounded corners, both have very similar performances up to 10 GHz, but, if you want to move to higher frequencies, then make round corners, so that the line width is maintained at all times.
+Nevertheless, if you want to work beyond 5 GHz, then you should surely use other material for your PCB because FR-4 ain’t gonna do, as you can see from the Insertion Loss (S(2,1)) which is considerably high (more then 3 dB), regardless of the trace type.&lt;/p&gt;
+
+&lt;p&gt;To try to understand these results, we can look at the TDR response of these lines.&lt;/p&gt;
+
+&lt;p style=&quot;text-align: center;&quot;&gt;&lt;img src=&quot;/images/post6/tdr.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;From the TDR response we can see clearly that the highest variations in impedance are from the 90 degree bend line, although the most smooth response seems to be the 45 curved line. It’s also possible to see that the impedance of the line is slightly below 50 Ω , with an impedance around 46 Ω . Still, to have a better feeling for the impedance variations, I’d have to simulate the circuit up to a higher frequency. Since at 20 GHz, the resolution we can get is (very) roughly 2 mm, that means 50 points of impedance along the designed line. That’s why maybe in this particular case the 45 degree curves look the best while the S-parameters tell otherwise. But I honestly didn’t bother because it would not add much else to the discussion.&lt;/p&gt;
+
+&lt;p&gt;We’ve seen the curve responses from an impedance perspective, but what about other possible malus effects? I decided to investigate another aspect of these lines: Radiation! This will give an idea about possible EMI problems.&lt;/p&gt;
+
+&lt;p&gt;The following plots show the electric field intensity of probes at a distance of 5 mm away (in the ‘z’ direction), around the corners and at the center of the line path.&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th style=&quot;text-align: center&quot;&gt;&lt;img src=&quot;/images/post6/efield_leftprobe_freq.png&quot; alt=&quot;&quot; /&gt;&lt;/th&gt;
+      &lt;th style=&quot;text-align: center&quot;&gt;&lt;img src=&quot;/images/post6/efield_leftprobe_time.png&quot; alt=&quot;&quot; /&gt;&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;Electric field at corner in frequency domain&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;Electric field at corner in time domain&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;&lt;img src=&quot;/images/post6/efield_middleprobe_freq.png&quot; alt=&quot;&quot; /&gt;&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;&lt;img src=&quot;/images/post6/efield_middleprobe_time.png&quot; alt=&quot;&quot; /&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;Electric field at middle in frequency domain&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;Electric field at middle in time domain&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;Looking at these results, although there are some particularities, I think it’s safe to say that the electric field intensity for all examples is pretty close. This means that each of these examples generates a similar amount of radiation, and that means that they have more or less the same susceptibility to EMI problems.&lt;/p&gt;
+
+&lt;p&gt;Now, looking more closely, there’s slight differences. The maximum electric field intensity generated is slightly higher for the 90º corner case, and smaller for the 45º bends (this is seen in the time domain), but the average value of the electric field intensity is more prominent in the 45º bends (this is seen in the time and frequency domain results). So, which one is actually more susceptible for EMI problems now?… The 90º bend! But by a very small margin compared to the others!&lt;/p&gt;
+
+&lt;p style=&quot;text-align: center;&quot;&gt;&lt;img src=&quot;/images/post6/noshitsherlock.gif&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;So all this stuff just to say that, unless you’re working on RF applications beyond 5 GHz of frequency, you should not worry jack about the 90º bends and by all means use them. Just bear in mind the space savings that those 45º curves provide… and how satisfying it is to look at those lines all lined up making curves together…&lt;/p&gt;
+
+&lt;p style=&quot;text-align: center;&quot;&gt;&lt;img src=&quot;/images/post6/ocd.gif&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Well that’s it for today. Next post I’ll try to get back to antenna topics, but I hope to release one about ‘via’ transitions on RF tracks soon.&lt;/p&gt;
+
+&lt;p&gt;Stay tuned!&lt;/p&gt;</content><author><name></name></author><summary type="html">Hey there folks. Today I’m going to talk about curves in PCB tracks. I’ve seen a few topics here and there trying to demystify the way that tracks should curve in order to avoid all sorts of magic stuff. There seems to be a large consensus about avoiding 90º degrees bend at all costs, then there’s a lot of people already claiming we’ve been doing stuff based on tradition only and that there’s no solid reason nor practical argument to not use 90º bent tracks. So I thought I should give my two cents on this subject. If you want to indulge in such a discussion, check out this EDA stack overflow thread.</summary></entry></feed>
